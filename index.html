@@ -43,9 +43,9 @@
 					<span class="icon-bar"></span>
 				</a>
 				<a class="brand" href="#">TU Finance Planner</a>
-				<form class="navbar-search pull-right">
-					<input type="text" class="search-query" placeholder="Search">
-				</form>
+				<!-- <form class="navbar-search pull-right">
+				<input type="text" class="search-query" placeholder="Search">
+				</form> -->
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li class="active"><a href="#">Home</a></li>
@@ -56,113 +56,132 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="container">
-
-		<h1>Bootstrap starter template</h1>
-		<div class="btn-group" data-toggle="buttons-radio">
-			<button type="button" class="btn btn-primary">Day</button>
-			<button type="button" class="btn btn-primary">Week</button>
-			<button type="button" class="btn btn-primary">Month</button>
-		</div>
-
-		<div id="calendar" style="border:1px solid">
-		<div class="row" style="margin:0px">
-			<div>
-				<div class="show-grid">
-					<div class="span2" style="margin:5px;width:120px">
-						<div style="width:50%;float:left">
-							+
-						</div>
-						<div style="width:50%;float:left">
-							1
-						</div>
-						&euro;500
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="show-grid">
-					<div class="span2" style="margin:5px;width:120px">
-						<div style="width:50%;float:left">
-							+
-						</div>
-						<div style="width:50%;float:left">
-							1
-						</div>
-						&euro;500
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="show-grid">
-					<div class="span2" style="margin:5px;width:120px">
-						<div style="width:50%;float:left">
-							+
-						</div>
-						<div style="width:50%;float:left">
-							1
-						</div>
-						&euro;500
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="show-grid">
-					<div class="span2" style="margin:5px;width:120px">
-						<div style="width:50%;float:left">
-							+
-						</div>
-						<div style="width:50%;float:left">
-							1
-						</div>
-						&euro;500
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="show-grid">
-					<div class="span2" style="margin:5px;width:120px">
-						<div style="width:50%;float:left">
-							+
-						</div>
-						<div style="width:50%;float:left">
-							1
-						</div>
-						&euro;500
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="show-grid">
-					<div class="span2" style="margin:5px;width:120px">
-						<div style="width:50%;float:left">
-							+
-						</div>
-						<div style="width:50%;float:left">
-							1
-						</div>
-						&euro;500
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="show-grid">
-					<div class="span2" style="margin:5px;width:120px">
-						<div style="width:50%;float:left">
-							+
-						</div>
-						<div style="width:50%;float:left">
-							1
-						</div>
-						&euro;500
-					</div>
-				</div>
-			</div>
-		</div>
 	
+
+	
+	<div class="container">
+		<div>
+			<!-- <div class="tabbable" style="width:50%;float:left;"> -->
+				<ul class="nav nav-pills">
+					<li><a href="#day" data-toggle="tab">Day</a></li>
+					<li><a href="#week" data-toggle="tab">Week</a></li>
+					<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
+					<li style="float:right"><a href="#">&gt;</a></li>
+					<li style="float:right"><a href="#">Today</a></li>
+					<li style="float:right"><a href="#">&lt;</a></li>
+				</ul>
+			<!-- </div> -->
+			<!-- <div style="width:50%;"> -->
+				<!-- <ul class="nav nav-pills" style="float:right">
+					
+				</ul> -->
+			<!-- </div> -->
+		</div>
+		<div class="tab-content" style="float:clear">
+			<div id="month" class="tab-pane active rounded" style="border:1px solid">
+				<div class="row" style="margin:0px">
+					<div>
+						<div class="show-grid" style="margin:0px">
+							<div class="span2" style="margin:5px;width:120px">
+								<div style="width:50%;float:left">
+									+
+								</div>
+								<div style="width:50%;float:left">
+									1
+								</div>
+								&euro;500
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="show-grid" style="margin:0px">
+							<div class="span2" style="margin:5px;width:120px">
+								<div style="width:50%;float:left">
+									+
+								</div>
+								<div style="width:50%;float:left">
+									1
+								</div>
+								&euro;500
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="show-grid" style="margin:0px">
+							<div class="span2" style="margin:5px;width:120px">
+								<div style="width:50%;float:left">
+									+
+								</div>
+								<div style="width:50%;float:left">
+									1
+								</div>
+								&euro;500
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="show-grid" style="margin:0px">
+							<div class="span2" style="margin:5px;width:120px">
+								<div style="width:50%;float:left">
+									+
+								</div>
+								<div style="width:50%;float:left">
+									1
+								</div>
+								&euro;500
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="show-grid" style="margin:0px">
+							<div class="span2" style="margin:5px;width:120px">
+								<div style="width:50%;float:left">
+									+
+								</div>
+								<div style="width:50%;float:left">
+									1
+								</div>
+								&euro;500
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="show-grid" style="margin:0px">
+							<div class="span2" style="margin:5px;width:120px">
+								<div style="width:50%;float:left">
+									+
+								</div>
+								<div style="width:50%;float:left">
+									1
+								</div>
+								&euro;500
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="show-grid" style="margin:0px">
+							<div class="span2" style="margin:5px;width:120px">
+								<div style="width:50%;float:left">
+									+
+								</div>
+								<div style="width:50%;float:left">
+									1
+								</div>
+								&euro;500
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="week">
+
+			</div>
+			<div id="day">
+
+			</div>
+		</div>
 	</div>
-	</div>
+
 	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap-transition.js"></script>
