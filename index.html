@@ -43,9 +43,7 @@
 					<span class="icon-bar"></span>
 				</a>
 				<a class="brand" href="#">TU Finance Planner</a>
-				<!-- <form class="navbar-search pull-right">
-				<input type="text" class="search-query" placeholder="Search">
-				</form> -->
+				
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li class="active"><a href="#">Home</a></li>
@@ -53,13 +51,14 @@
 						<li><a href="#contact">Preferences</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
+				<form class="navbar-search pull-right">
+					<input type="text" id="search" class="search-query" placeholder="Search" onkeypress="openSearch(event,'tu_fp_home_content','tu_fp_search_content','search','tu_fp_search_content_term')">
+				</form>
 			</div>
 		</div>
 	</div>
 	
-
-	
-	<div class="container">
+	<div class="container" id="tu_fp_home_content">
 		<div>
 				<ul class="nav nav-pills">
 					<li><a href="#day" data-toggle="tab">Day</a></li>
@@ -606,6 +605,10 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="container" id="tu_fp_search_content" style="display:none">
+		<h2 id="tu_fp_search_content_term">Search term:</h2>
+	</div>
 
 	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	<script src="js/jquery.js"></script>
@@ -627,6 +630,7 @@
 	<script src="js/google-code-prettify/prettify.js"></script>
 
 	<script src="js/application.js"></script>
+	<script src="js/tu_fp/tu_fp.js"></script>
 
 </body>
 </html>
