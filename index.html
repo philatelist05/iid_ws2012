@@ -16,6 +16,11 @@
 	body {
 		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 	}
+	
+	.collapse.in {
+		height: auto;
+		overflow: visible !important;
+	}
 	</style>
 	
 	
@@ -636,16 +641,34 @@
 							</a>
 						</div>
 						<div id="collapseOne" class="accordion-body collapse">
-							<div class="accordion-inner">
-								<div class="dropdown">
-								  <!-- Link or button to toggle dropdown -->
-									<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-										<li><a tabindex="-1" href="#">Action</a></li>
-										<li><a tabindex="-1" href="#">Another action</a></li>
-										<li><a tabindex="-1" href="#">Something else here</a></li>
-										<li class="divider"></li>
-										<li><a tabindex="-1" href="#">Separated link</a></li>
-									</ul>
+							<div class="accordion-inner">								
+								<div class="clearfix" Style="width:50%;float:left">
+									<label>From:</label>
+									<div class="input">
+										<input class="xlarge disabled" type="date" placeholder=""/>
+									</div>
+								</div>
+								
+								<div class="clearfix" Style="width:50%;float:left">
+									<label>To:</label>
+									<div class="input">
+										<input class="xlarge disabled" type="date" placeholder=""/>
+									</div>
+								</div>
+								
+								<div class="clearfix">
+									<label>Category:</label>
+									<div class="input">
+										<select>
+											<option>All</option>
+											<option>Food</option>
+											<option>IT</option>
+											<option>Misc</option>
+											<option>Music</option>
+											<option>Present</option>
+											<option>Salary</option>
+										</select>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -774,8 +797,8 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	<script src="js/DataTables-1.9.4/media/js/jquery.js"></script>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	<script src="js/bootstrap-transition.js"></script>
 	<script src="js/bootstrap-alert.js"></script>
 	<script src="js/bootstrap-modal.js"></script>

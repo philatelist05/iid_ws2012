@@ -15,3 +15,12 @@ function setSearchTerm(inputID,outputID){
 	$('#example').dataTable().fnFilter(document.getElementById(inputID).value);
 	document.getElementById(inputID).value = '';
 }
+
+// $('#test').in({
+    // shown: function(){
+        // $(this).css('overflow','visible !important');
+    // },
+    // hide: function(){
+        // $(this).css('overflow','hidden !important');
+    // }
+// });
