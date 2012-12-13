@@ -12,5 +12,6 @@ function hideShowDiv(hideID,showID){
 }
 
 function setSearchTerm(inputID,outputID){
-	document.getElementById(outputID).innerHTML = 'Search results for "' + document.getElementById(inputID).value + '":';
+	$('#example').dataTable().fnFilter(document.getElementById(inputID).value);
+	document.getElementById(inputID).value = '';
 }
