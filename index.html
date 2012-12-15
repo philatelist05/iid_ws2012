@@ -797,19 +797,124 @@
 		</div>
 	</div>
 	
+	<!-- BEGIN OF MODAL DIALOG -->
 	<div id="newRecord" class="modal hide fade">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3>Modal header</h3>
+    <h3>New Entry</h3>
   </div>
   <div class="modal-body">
-    <p>One fine body…</p>
+    <form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputValue">Value:</label>
+    <div class="controls">
+      <input type="text" id="inputValue" placeholder="Value"/>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputDescription">Name / Description:</label>
+    <div class="controls">
+      <textarea rows="5" id="inputDescription" placeholder="Description"></textarea>
+    </div>
+  </div>
+    <div class="control-group">
+    <label class="control-label" for="inputTime">Time:</label>
+    <div class="controls">
+      TODO: slider ...
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputVerification">Verification (e.g. bill):</label>
+    <div class="controls">
+      <input type="file" id="inputVerification" placeholder="inputVerification"/>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputCategory">Category</label>
+    <div class="controls">
+      <select id="inputVerification">
+         <option>please select ...</option>
+         <option>Rent</option>
+         <option>Car</option>
+         <option>Energy</option>
+      </select>
+      <a href="#" data-toggle="collapse" data-target="#categoryDiv">Plus</a>
+    </div>
+  </div>
+  
+  
+  <div id="categoryDiv" class="collapse">
+  <div class="control-group">
+    <label class="control-label" for="inputCategoryName">Category Name:</label>
+    <div class="controls">
+      <input type="text" id="inputCategoryName" placeholder="Name"/>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputColor">Color:</label>
+    <div class="controls">
+      TODO: color
+    </div>
+  </div>    
+  <div class="control-group">
+    <label class="control-label" for="inputIntervalCheck">Interval?</label>
+    <div class="controls">
+      <input type="checkbox" id="inputIntervalCheck" data-toggle="collapse" data-target="#intervalDiv">
+    </div>
+  </div> 
+  </div>
+  
+  
+  <div id="intervalDiv" class="collapse">
+  <div class="control-group">
+    <label class="control-label" for="inputInterval">Interval</label>
+    <div class="controls">
+      <select id="inputInterval">
+         <option>please select ...</option>
+         <option>daily</option>
+         <option>weekly</option>
+         <option>yearly</option>
+         <option></option>
+         </select>
+    </div>
+  </div>   
+  <div class="control-group">
+    <label class="control-label" for="inputWeekday">Weekday:</label>
+    <div class="controls">
+      <input type="checkbox" value="monday"> Mon
+      <input type="checkbox" value="tuesday"> Tue
+      <input type="checkbox" value="wedensday"> Wed
+      <input type="checkbox" value="thursday"> Thu
+      <input type="checkbox" value="friday"> Fri <br/>
+      <input type="checkbox" value="saturday"> Sat
+      <input type="checkbox" value="sunday"> Sun
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputBeginDate">Begin Date:</label>
+    <div class="controls">
+      <input type="date" id="inputBeginDate" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputEnd">End:</label>
+    <div class="controls">
+      <input type="radio" name="end"> Never <br/>
+      <input type="radio" name="end"> at 
+      <input type="date" id="inputEndDate"/>
+    </div>
+  </div>  
+  </div>
+        
+</form>
   </div>
   <div class="modal-footer">
-    <a href="#" class="btn">Close</a>
-    <a href="#" class="btn btn-primary">Save changes</a>
+    <a href="#" class="btn">Cancel</a>
+    <a href="#" class="btn btn-primary">Save</a>
   </div>
 </div>
+   <!-- END OF MODAL DIALOG -->
+
 
 	<script src="js/DataTables-1.9.4/media/js/jquery.js"></script>
 	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
