@@ -16,6 +16,22 @@ function setSearchTerm(inputID,outputID){
 	document.getElementById(inputID).value = '';
 }
 
+var showStatisticBars = function() {
+	$(".statisticsbarup").slideDown();
+	$(".statisticsbardown").slideDown();
+}
+
+$(document).ready(function() {
+	$(".akkupositiv").slideDown();
+	$(".show-grid").on({
+		mouseenter: function(ev) {
+			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeIn(80);
+		},
+		mouseleave: function(ev) {
+			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
+	}});
+});
+
 // $('#test').in({
     // shown: function(){
         // $(this).css('overflow','visible !important');

@@ -4,41 +4,44 @@
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
+
 .money {
 	font-weight:bold;
 	font-size:16px;
 }
+
 .tufinancebrand {
-display: block;
-float: left;
-padding: 10px 20px;
-    padding-top: 10px;
-    padding-right-value: 20px;
-    padding-bottom: 10px;
-    padding-left-value: 20px;
-    padding-left-ltr-source: physical;
-    padding-left-rtl-source: physical;
-    padding-right-ltr-source: physical;
-    padding-right-rtl-source: physical;
-margin-left: -20px;
-    margin-left-value: -20px;
-    margin-left-ltr-source: physical;
-    margin-left-rtl-source: physical;
-font-size: 20px;
-font-weight: 200;
-  color: #999999;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-          transition: all .2s linear;
+	display: block;
+	float: left;
+	padding: 10px 20px;
+	padding-top: 10px;
+	padding-right-value: 20px;
+	padding-bottom: 10px;
+	padding-left-value: 20px;
+	padding-left-ltr-source: physical;
+	padding-left-rtl-source: physical;
+	padding-right-ltr-source: physical;
+	padding-right-rtl-source: physical;
+	margin-left: -20px;
+	margin-left-value: -20px;
+	margin-left-ltr-source: physical;
+	margin-left-rtl-source: physical;
+	font-size: 20px;
+	font-weight: 200;
+	color: #999999;
+	text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	transition: all .2s linear;
 }
+
 .tufinancebrand:hover {
   text-decoration: none;
   color: #FFF;
   text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
 }
 
-.spacer200 { 
+.spacer100 { 
 	height: 100px;
 	width: 90%;
 }
@@ -48,6 +51,7 @@ font-weight: 200;
 	background-color: #ffffff;
 	position: relative;
 }
+
 .akkupositiv {
 	background-color: #33cc00;
 	position: absolute;
@@ -57,11 +61,13 @@ font-weight: 200;
 	float:none;
 	border:1px solid #000
 }
+
 .akkuline {
 	background-color: #000000;
 	width: 100%;
 	height: 3px;
 }
+
 .akkunegativ {
 	background-color: #cc0000;
 	height: 30px;
@@ -69,8 +75,35 @@ font-weight: 200;
 	float:none;
 	border:1px solid #000
 }
+
 .akkuvalue {
 	color:#fff;
 	font-size:20px;
-	text-align:center
+	text-align:center;
+}
+
+.statisticsbarup {
+	color:#000;
+	width:90px;
+	position:absolute;
+	bottom:0;
+	margin:0 auto;
+	font-size:18px;
+	text-align:center;
+}
+
+.statisticsbardown {
+	color:#000;
+	width:90px;
+	position:absolute;
+	margin:0 auto;
+	font-size:18px;
+	text-align:center;
+}
+
+.statisticsspace {
+	background-color:#ffffff;
+	width:90%;
+	height:210px;
+	position:relative;
 }

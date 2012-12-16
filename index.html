@@ -56,7 +56,7 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li class="active"><a href="#tu_fp_home_content" onClick="hideShowDiv('tu_fp_search_content','tu_fp_global_container')" data-toggle="tab">Home</a></li>
-							<li><a href="#tu_fp_evaluation_content" onClick="hideShowDiv('tu_fp_search_content','tu_fp_global_container')" data-toggle="tab">Evaluation</a></li>
+							<li><a href="#tu_fp_evaluation_content" onClick="hideShowDiv('tu_fp_search_content','tu_fp_global_container');showStatisticBars()" data-toggle="tab">Evaluation</a></li>
 							<li><a href="#tu_fp_preferences_content" onClick="hideShowDiv('tu_fp_search_content','tu_fp_global_container')" data-toggle="tab">Preferences</a></li>
 						</ul>
 						<div class="navbar-search pull-right">
@@ -710,7 +710,25 @@
 			</div>
 		
 			<div class="tab-pane" id="tu_fp_evaluation_content">
-				<h2 id="tu_fp_evaluation_content_header">Evaluation</h2>
+				<div class="container" style="width:100%;padding:0;margin:0">
+					<div style="float:left;background-color:#000000;width:3px;height:430px;margin:0;padding:0"></div>
+					<div style="width:90%;float:left;margin:0;padding:0">
+						<div class="span2" style="width:100%;height:430px;margin:0;padding:0">
+							<div class="statisticsspace">
+								<div class="statisticsbarup" style="background-color:#aaaaee;height:100px;left:10px" hidden>Income</div>
+								<div class="statisticsbarup" style="background-color:#ffaaaa;height:30px;left:310px" hidden>Insurances
+									<div class="statisticsbarup" style="background-color:#ffff66;height:10px" hidden></div>
+								</div>
+							</div>
+							<div style="background-color:#000000;width:100%;height:3px"></div>
+							<div class="statisticsspace">
+								<div class="statisticsbardown" style="background-color:#99ff99;height:90px;left:110px" hidden>Rent</div>
+								<div class="statisticsbardown" style="background-color:#99eeee;height:170px;left:210px" hidden>Car</div>
+								<div class="statisticsbardown" style="background-color:#ff9999;height:20px;left:310px" hidden></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		
 			<div class="tab-pane" id="tu_fp_preferences_content">
@@ -881,6 +899,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 		</div>
 	
 	<!-- BEGIN OF MODAL DIALOG -->
@@ -1003,11 +1022,11 @@
 
 
 		<div class="container pull-right" style="width:8%">
-			<div class="spacer200 akkupositivspace">
-				<div class="spacer200 akkupositiv" hidden><p class="akkuvalue">800&euro;</p></div>
+			<div class="spacer100 akkupositivspace">
+				<div class="spacer100 akkupositiv" hidden><p class="akkuvalue">800&euro;</p></div>
 			</div>
-			<div class="spacer200 akkuline" style="margin:0 auto;float:none"></div>
-			<div class="spacer200 akkunegativ" hidden><p class="akkuvalue">800&euro;</p></div>
+			<div class="spacer100 akkuline" style="margin:0 auto;float:none"></div>
+			<div class="spacer100 akkunegativ" hidden><p class="akkuvalue">800&euro;</p></div>
 		</div>
 	</div>
 </div>
@@ -1037,19 +1056,6 @@
 <script type="text/javascript" charset="utf-8" language="javascript" src="js/DataTables-1.9.4/media/js/DT_bootstrap.js"></script>
 <script src="js/application.js"></script>
 <script src="js/tu_fp/tu_fp.js"></script>
-
-<script>
-	$(document).ready(function() {
-		$(".akkupositiv").slideDown();
-		$(".show-grid").on({
-			mouseenter: function(ev) {
-				$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeIn(80);
-			},
-			mouseleave: function(ev) {
-				$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
-		}});
-	});
-</script>
 
 </body>
 </html>
