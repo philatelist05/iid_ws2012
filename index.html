@@ -615,7 +615,93 @@
 							</table>
 							<img src="img/tu_fp/week_view_graph.png">
 						</div>
-						<div id="day">
+					<div id="day" class="tab-pane">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="span1" > Time</th>
+									<th style="width:100%;text-align:center"> Mo, 03. Dezember 2012</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>08:00</td>
+									<td class="show-grid" style="padding:0px">
+										<div class="span2" style="width:100%;margin-left:0px;margin-right:0px;border-radius:0px;line-height:35px;text-align:left">
+											     +    -150 &euro;, Toner Rainbow Kit for Samsung CLX-3175 Printer  
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>08:30</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>09:00</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>09:30</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>10:00</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>10:30</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>11:00</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>11:30</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>12:00</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>12:30</td>
+									<td> </td>
+								</tr>
+									<tr>
+									<td>13:00</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>13:30</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>14:00</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>14:30</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>15:00</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>15:30</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>16:00</td>
+									<td> </td>
+								</tr>
+								<tr>
+									<td>16:30</td>
+									<td> </td>
+								</tr>
+							</tbody>
+						</table>
 						</div>
 					</div>
 				</div>
@@ -795,19 +881,124 @@
 				</div>
 		</div>
 	
+	<!-- BEGIN OF MODAL DIALOG -->
 		<div id="newRecord" class="modal hide fade">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3>Modal header</h3>
+				<h3>New Entry</h3>
 			</div>
 			<div class="modal-body">
-				<p>One fine body…</p>
+				<form class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="inputValue">Value:</label>
+						<div class="controls">
+							<input type="text" id="inputValue" placeholder="Value"/>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputDescription">Name / Description:</label>
+						<div class="controls">
+							<textarea rows="5" id="inputDescription" placeholder="Description"></textarea>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputTime">Time:</label>
+						<div class="controls">
+							TODO: slider ...
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputVerification">Verification (e.g. bill):</label>
+						<div class="controls">
+							<input type="file" id="inputVerification" placeholder="inputVerification"/>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputCategory">Category</label>
+						<div class="controls">
+							<select id="inputVerification">
+								<option>please select ...</option>
+								<option>Rent</option>
+								<option>Car</option>
+								<option>Energy</option>
+							</select>
+							<a href="#" data-toggle="collapse" data-target="#categoryDiv">Plus</a>
+						</div>
+					</div>
+  
+  
+					<div id="categoryDiv" class="collapse">
+						<div class="control-group">
+							<label class="control-label" for="inputCategoryName">Category Name:</label>
+							<div class="controls">
+								<input type="text" id="inputCategoryName" placeholder="Name"/>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputColor">Color:</label>
+							<div class="controls">
+								TODO: color
+							</div>
+						</div>    
+						<div class="control-group">
+							<label class="control-label" for="inputIntervalCheck">Interval?</label>
+							<div class="controls">
+								<input type="checkbox" id="inputIntervalCheck" data-toggle="collapse" data-target="#intervalDiv">
+							</div>
+						</div> 
+					</div>
+  
+  
+					<div id="intervalDiv" class="collapse">
+						<div class="control-group">
+							<label class="control-label" for="inputInterval">Interval</label>
+							<div class="controls">
+								<select id="inputInterval">
+									<option>please select ...</option>
+									<option>daily</option>
+									<option>weekly</option>
+									<option>yearly</option>
+									<option></option>
+								</select>
+							</div>
+						</div>   
+						<div class="control-group">
+							<label class="control-label" for="inputWeekday">Weekday:</label>
+							<div class="controls">
+								<input type="checkbox" value="monday"> Mon
+								<input type="checkbox" value="tuesday"> Tue
+								<input type="checkbox" value="wedensday"> Wed
+								<input type="checkbox" value="thursday"> Thu
+								<input type="checkbox" value="friday"> Fri <br/>
+								<input type="checkbox" value="saturday"> Sat
+								<input type="checkbox" value="sunday"> Sun
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputBeginDate">Begin Date:</label>
+							<div class="controls">
+								<input type="date" id="inputBeginDate" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputEnd">End:</label>
+							<div class="controls">
+								<input type="radio" name="end"> Never <br/>
+								<input type="radio" name="end"> at 
+								<input type="date" id="inputEndDate"/>
+							</div>
+						</div>  
+					</div>
+
+				</form>
 			</div>
 			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal">Close</a>
-				<a href="#" class="btn btn-primary">Save changes</a>
+				<a href="#" class="btn" data-dismiss="modal">Cancel</a>
+				<a href="#" class="btn btn-primary">Save</a>
 			</div>
 		</div>
+		<!-- END OF MODAL DIALOG -->
+
 
 		<div class="container row pull-right" style="width:8%">
 			<div class="spacer200 akkupositivspace">
@@ -822,57 +1013,41 @@
 	
 
 
-	<script src="js/DataTables-1.9.4/media/js/jquery.js"></script>
-	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-	<script src="js/bootstrap-transition.js"></script>
-	<script src="js/bootstrap-alert.js"></script>
-	<script src="js/bootstrap-modal.js"></script>
-	<script src="js/bootstrap-dropdown.js"></script>
-	<script src="js/bootstrap-scrollspy.js"></script>
-	<script src="js/bootstrap-tab.js"></script>
-	<script src="js/bootstrap-tooltip.js"></script>
-	<script src="js/bootstrap-popover.js"></script>
-	<script src="js/bootstrap-button.js"></script>
-	<script src="js/bootstrap-collapse.js"></script>
-	<script src="js/bootstrap-carousel.js"></script>
-	<script src="js/bootstrap-typeahead.js"></script>
-	<script src="js/bootstrap-affix.js"></script>
+<script src="js/DataTables-1.9.4/media/js/jquery.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-button.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-carousel.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
+<script src="js/bootstrap-affix.js"></script>
 
-	<script src="js/holder/holder.js"></script>
-	<script src="js/google-code-prettify/prettify.js"></script>
-	<script type="text/javascript" charset="utf-8" language="javascript" src="js/DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
-	<script type="text/javascript" charset="utf-8" language="javascript" src="js/DataTables-1.9.4/media/js/DT_bootstrap.js"></script>
-	<script src="js/application.js"></script>
-	<script src="js/tu_fp/tu_fp.js"></script>
+<script src="js/holder/holder.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="js/DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="js/DataTables-1.9.4/media/js/DT_bootstrap.js"></script>
+<script src="js/application.js"></script>
+<script src="js/tu_fp/tu_fp.js"></script>
 
-	<script>
-
-
-var showPlus = function(ev) {
-	$(this).html($(this).html().replace("&nbsp;", "<img src=\"img/add.png\">"));
-	$(".show-grid").bind("mouseleave", hidePlus);
-}
-
-var hidePlus = function hidePlus(ev) {
-	$(this).html($(this).html().replace("<img src=\"img/add.png\">", "&nbsp;"));
-}
-
-		$(document).ready(function() {
-			$(".akkupositiv").slideDown();
-			$(".show-grid").on({
-				mouseenter: function(ev) {
-					$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeIn(80);
-					//alert(JSON.stringify($(this).children(".span2")));
-					//console.log($(this).children(".span2").children(".addButtonContainer").html());
-//					$(this).html($(this).html().replace("&nbsp;", "<img src=\"img/add.png\">"));
-				},
-				mouseleave: function(ev) {
-					$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
-//	$(this).html($(this).html().replace("<img src=\"img/add.png\">", "&nbsp;"));
-			}});
-//			$(".show-grid").bind(showPlus,hidePlus);
-		});
-	</script>
+<script>
+	$(document).ready(function() {
+		$(".akkupositiv").slideDown();
+		$(".show-grid").on({
+			mouseenter: function(ev) {
+				$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeIn(80);
+			},
+			mouseleave: function(ev) {
+				$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
+		}});
+	});
+</script>
 
 </body>
 </html>
