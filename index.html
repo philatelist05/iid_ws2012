@@ -733,6 +733,102 @@
 		
 			<div class="tab-pane" id="tu_fp_preferences_content">
 				<h2 id="tu_fp_preferences_content_header">Preferences</h2>
+				<div id="preferences" class="tab-pane active rounded"> 
+					<fieldset><legend>Defaultview</legend>
+						<label for="day-view" tabindex="1" accesskey="d">
+							<span> Day </span>
+							<input type="radio" name="radiogrp" id="day-view" value="d" checked="checked" />
+						</label>
+						<label for="week-view" tabindex="2" accesskey="w">
+							Week
+							<input type="radio" name="radiogrp" id="week-view" value="w" />
+						</label>
+						<label for="month-view" tabindex="3" accesskey="m">
+							Month
+							<input type="radio" name="radiogrp" id="month-view" value="m" />
+						</label>
+
+					</fieldset>
+					<fieldset><legend>Standard Tablestyle</legend>
+						<label for="chooseable">
+							Chooseable
+							<select name="chooseable" id="chooseable" title="Please choose!" size = "5" multiple>
+								<option>Date</option>
+								<option>Time</option>
+								<option>Value</option>
+								<option>Description</option>
+							</select>
+						</label>
+						<label for="active">
+							Active
+							<select name="active" id="active" title="Please choose!" size = "5" multiple>
+								<option>Time</option>
+								<option>Value</option>
+								<option>Description</option>
+							</select>
+						</label>
+					</fieldset>
+					
+					<fieldset><legend>Sortingstyle</legend>
+						<label for="sortingstyle">
+							Column
+							<select name="sortingstyle" id="sortingstyle" title="Please choose!">
+								<option>Select one ...</option>
+								<option>Date</option>
+								<option>Time</option>
+								<option>Value</option>
+								<option>Description</option>
+							</select>
+							
+						</label>
+							<span>by </span>
+							<label for="rg2as"> Ascending
+							<input type="radio" name="rgrp2" id="rg2as" value="as" checked="checked"/>
+							</label>
+							<label for="rg2des">Descending
+							<input type="radio" name="rgrp2" id="rg2des" value="des" /></label>
+						
+					</fieldset>
+					<fieldset><legend>Define Limits</legend>
+						<label for="minB"><span>min. Budgetlimit: 
+							<input type="text" name="minBE" id="minB" />
+							<span> , </span>
+							<input type="text" name="minBC" id="minB" />
+						</label>
+						<label for="maxS"><span>max. Spendinglimit: 
+							<input type="text" name="maxSpE" id="maxS" />
+							<span> , </span>
+							<input type="text" name="maxSpC" id="maxS" />
+						</label>
+					</fieldset>
+					<fieldset><legend> Evaluation defaults  </legend>
+						<label for="defcategory">
+							Default category: 
+							<select name="category" id="category" title="Please choose!">
+								<option>Select one ...</option>
+								<option>Food</option>
+								<option>Housing</option>
+								<option>Life</option>
+								<option>Shoes</option>
+							</select>
+							
+						</label>
+						<div>
+							<span>Default period: </span>
+							<label for="rgp">Month
+							<input type="radio" name="rgrpp" id="r_m" value="rm" checked="checked"/>
+							</label>
+							<label for="rgp">Quarter
+							<input type="radio" name="rgrpp" id="r_q" value="rq" /></label>
+							<label for="rgp">Year
+							<input type="radio" name="rgrpp" id="r_y" value="ry" /></label>
+						</div>
+					</fieldset>
+					<fieldset class="submitgrp">
+						<input type="submit" value="Save" />
+						<input type="reset" value="Cancel" />
+					</fieldset>
+				</div>
 			</div>
 	
 		</div>
