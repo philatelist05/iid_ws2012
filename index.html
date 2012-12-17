@@ -792,45 +792,44 @@
 		
 			<div class="tab-pane" id="tu_fp_preferences_content">
 				<h2 id="tu_fp_preferences_content_header">Preferences</h2>
-				<div id="preferences" class="tab-pane active rounded"> 
-					<fieldset><legend>Defaultview</legend>
-						<label for="day-view" tabindex="1" accesskey="d">
-							<span> Day </span>
-							<input type="radio" name="radiogrp" id="day-view" value="d" checked="checked" />
-						</label>
-						<label for="week-view" tabindex="2" accesskey="w">
-							Week
-							<input type="radio" name="radiogrp" id="week-view" value="w" />
-						</label>
-						<label for="month-view" tabindex="3" accesskey="m">
-							Month
-							<input type="radio" name="radiogrp" id="month-view" value="m" />
-						</label>
-
-					</fieldset>
-					<fieldset><legend>Standard Tablestyle</legend>
-						<label for="chooseable">
-							Chooseable
+					<form class="form-inline" >
+						<legend>Defaultview</legend>
+							<div class="control-group">
+								<label class="radio inline control-label" tabindex="1" accesskey="d">
+									<input type="radio" name = "view" id="DayView" value="day"> Day
+								</label>
+								<label class="radio inline control-label" tabindex="2" accesskey="w">
+									<input type="radio" name = "view" id="WeekView" value="week"> Week
+								</label>
+								<label class="radio inline control-label" tabindex="3" accesskey="m">
+									<input type="radio" name = "view" id="MonthView" value="month"> Month
+								</label>
+							</div>		
+							
+						<legend>Standard Tablestyle</legend>
+							<label for="chooseable">
+								Chooseable
+							</label>
 							<select name="chooseable" id="chooseable" title="Please choose!" size = "5" multiple>
 								<option>Date</option>
 								<option>Time</option>
 								<option>Value</option>
 								<option>Description</option>
 							</select>
-						</label>
-						<label for="active">
-							Active
-							<select name="active" id="active" title="Please choose!" size = "5" multiple>
-								<option>Time</option>
-								<option>Value</option>
-								<option>Description</option>
-							</select>
-						</label>
-					</fieldset>
-					
-					<fieldset><legend>Sortingstyle</legend>
-						<label for="sortingstyle">
+						
+							<label for="active">
+								Active
+							</label>
+								<select name="active" id="active" title="Please choose!" size = "5" multiple>
+									<option>Time</option>
+									<option>Value</option>
+									<option>Description</option>
+								</select>
+						
+						<legend>Sortingstyle</legend>
+							<label for="sortingstyle">
 							Column
+						</label>
 							<select name="sortingstyle" id="sortingstyle" title="Please choose!">
 								<option>Select one ...</option>
 								<option>Date</option>
@@ -839,28 +838,40 @@
 								<option>Description</option>
 							</select>
 							
-						</label>
+						
 							<span>by </span>
+							
 							<label for="rg2as"> Ascending
+							</label>
+							<label class = "radio-inline">
 							<input type="radio" name="rgrp2" id="rg2as" value="as" checked="checked"/>
 							</label>
 							<label for="rg2des">Descending
-							<input type="radio" name="rgrp2" id="rg2des" value="des" /></label>
-						
-					</fieldset>
-					<fieldset><legend>Define Limits</legend>
-						<label for="minB"><span>min. Budgetlimit: 
-							<input type="text" name="minBE" id="minB" />
-							<span> , </span>
-							<input type="text" name="minBC" id="minB" />
+							</label>
+							<label class = "radio-inline" >
+							<input type="radio" name="rgrp2" id="rg2des" value="des" />
+							</label>
+				
+					<legend>Define Limits</legend>
+					<div class = "control-group" >
+						<label class = "control-label" for="minB">min. Budgetlimit: 
 						</label>
-						<label for="maxS"><span>max. Spendinglimit: 
-							<input type="text" name="maxSpE" id="maxS" />
-							<span> , </span>
-							<input type="text" name="maxSpC" id="maxS" />
+						<div class = "controls" >
+						<input class = "input-small" type="text" name="minBE" id="minB" placeholder = "100"/>
+						<span> , </span>
+						<input class = "input-small" type="text" name="minBC" id="minB" placeholder = "00"/>
+						</div>
+						<br/>
+						<label class = "control-label" for="maxS">max. Spendinglimit: 
 						</label>
-					</fieldset>
-					<fieldset><legend> Evaluation defaults  </legend>
+						<div class = "conrtols" >
+						<input class = "input-small" type="text" name="maxSpE" id="maxS" placeholder = "200"/>
+						<span> , </span>
+						<input class = "input-small" type="text" name="maxSpC" id="maxS" placeholder = "00" />
+						</div>
+					</div>
+					
+					<legend> Evaluation defaults  </legend>
 						<label for="defcategory">
 							Default category: 
 							<select name="category" id="category" title="Please choose!">
@@ -869,25 +880,30 @@
 								<option>Housing</option>
 								<option>Life</option>
 								<option>Shoes</option>
-							</select>
-							
+							</select>	
 						</label>
-						<div>
-							<span>Default period: </span>
-							<label for="rgp">Month
-							<input type="radio" name="rgrpp" id="r_m" value="rm" checked="checked"/>
-							</label>
-							<label for="rgp">Quarter
-							<input type="radio" name="rgrpp" id="r_q" value="rq" /></label>
-							<label for="rgp">Year
-							<input type="radio" name="rgrpp" id="r_y" value="ry" /></label>
+
+						<div class = "control-group">
+							<label class = "control-label" for = "MonthPeriod" > Default period: </label>
+							<div class="controls">
+								<label class="radio inline control-label" tabindex="10" accesskey="d">
+									<input type="radio" name = "view" id="MonthPeriod" value="monthp"> Month
+								</label>
+								<label class="radio inline control-label" tabindex="11" accesskey="w">
+									<input type="radio" name = "view" id="WeekPeriod" value="weekp"> Week
+								</label>
+								<label class="radio inline control-label" tabindex="12" accesskey="m">
+									<input type="radio" name = "view" id="YearPeriod" value="yearp"> Year
+								</label>
+							</div>	
 						</div>
-					</fieldset>
-					<fieldset class="submitgrp">
-						<input type="submit" value="Save" />
-						<input type="reset" value="Cancel" />
-					</fieldset>
-				</div>
+			
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">Save changes</button>
+							<button type="button" class="btn">Cancel</button>
+						</div>
+					
+				</form>
 			</div>
 	
 		</div>
