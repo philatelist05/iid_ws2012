@@ -23,6 +23,7 @@
 		height: auto;
 		overflow: visible !important;
 	}
+	
 	</style>
 	
 	
@@ -907,14 +908,14 @@
 									<div class="clearfix" Style="width:50%;float:left">
 										<label>From:</label>
 										<div class="input">
-											<input class="xlarge disabled" type="date" placeholder=""/>
+											<input class="xlarge disabled date" placeholder=""/>
 										</div>
 									</div>
 								
 									<div class="clearfix" Style="width:50%;float:left">
 										<label>To:</label>
 										<div class="input">
-											<input class="xlarge disabled" type="date" placeholder=""/>
+											<input class="xlarge disabled date" placeholder=""/>
 										</div>
 									</div>
 								
@@ -1079,7 +1080,9 @@
 					<div class="control-group">
 						<label class="control-label" for="inputTime">Time:</label>
 						<div class="controls">
-							TODO: slider ...
+							<div style="width:100%">
+								<div id="slider"></div>
+							</div>
 						</div>
 					</div>
 					<div class="control-group">
@@ -1159,7 +1162,7 @@
 						<div class="control-group">
 							<label class="control-label" for="inputBeginDate">Begin Date:</label>
 							<div class="controls">
-								<input type="date" id="inputBeginDate" />
+								<input class="date" id="inputBeginDate" />
 							</div>
 						</div>
 						<div class="control-group">
@@ -1167,7 +1170,7 @@
 							<div class="controls">
 								<input type="radio" name="end"> Never <br/>
 								<input type="radio" name="end"> at 
-								<input type="date" id="inputEndDate"/>
+								<input class="date" id="inputEndDate"/>
 							</div>
 						</div>  
 					</div>
@@ -1194,7 +1197,7 @@
 
 	
 <script src="js/jquery.js"></script>
-<script src="js/jquery-ui-1.9.2.custom.js"></script>
+
 <script src="js/DataTables-1.9.4/media/js/jquery.js"></script>
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <script src="js/bootstrap-transition.js"></script>
@@ -1218,10 +1221,7 @@
 <script src="js/application.js"></script>
 
 <script src="js/colorpicker.js"></script>
-<script type="text/javascript" src="js/eye.js"></script>
-<script type="text/javascript" src="js/utils.js"></script>
-<script type="text/javascript" src="js/layout.js?ver=1.0.2"></script>
-
+<script src="js/jquery-ui-1.9.2.custom.js"></script>
 <script src="js/tu_fp/tu_fp.js"></script>
 
 </body>

@@ -30,13 +30,39 @@ $(document).ready(function() {
 		mouseleave: function(ev) {
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
 	}});
+	$(".date").datepicker();
 });
+$(function() {
+				var slider  = $('#slider');
+	var $div = $("<div id='tooltip'/>")
+                    .css({ position : 'absolute' , top : -20, left : 0, display : "block" })
+                    .text("12:00");
+                    
+                    slider.slider()
+                    .find(".ui-slider-handle")
+          .append($div);
+                    
+			slider.slider({
+				range: "min",
+				min: 1,
+				max: 48,
+				value: 24,
 
-// $('#test').in({
-    // shown: function(){
-        // $(this).css('overflow','visible !important');
-    // },
-    // hide: function(){
-        // $(this).css('overflow','hidden !important');
-    // }
-// });
+				slide: function(event, ui) {
+					var number = ui.value / 2;
+					var hour  = Math.floor(number);
+					
+					var minute = "00";
+					dec = (number + "").split(".");
+					if(dec.length == 2) {
+						minute = dec[1] * 60;
+						minute = (minute + "").substring(0, 2); 
+					}
+					
+					$('#tooltip').text(hour + ":" + minute);
+				}
+			});
+			
+		});
+		
+
