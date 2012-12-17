@@ -57,9 +57,27 @@ $(document).ready(function() {
 			$(this).css({"opacity" : 1});
 	}});
 	
+	
+	
+	/*PopOvers*/	
+	$("#recuringInterval").popover({
+				title: '<div style="width:100%;text-align:right;"><a href="#" onclick="$(\'#recuringInterval\').popover(\'hide\')">x</a></div>',
+				content: $("#repeatRangePlaceHolder").html(),
+				placement: "top",
+				html: true
+	});
+	$("#shouldRecur").popover({
+				title: '<div style="width:100%;text-align:right;"><a href="#" onclick="$(\'#shouldRecur\').popover(\'hide\')">x</a></div>',
+				content: $("#intervalPlaceHolder").html(),
+				placement: "top",
+				html: true
+	});
+	
 	/* DatePickers */
 	$(".date").datepicker();
 });
+
+
 $(function() {
 				var slider  = $('#slider');
 	var $div = $("<div id='tooltip'/>")

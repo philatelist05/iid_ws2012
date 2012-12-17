@@ -1126,16 +1126,24 @@
 								<div id="colorChooserDiv" class="collapse"></div>
 							</div>
 						</div>    
-						<div class="control-group">
-							<label class="control-label" for="inputIntervalCheck">Interval?</label>
+					</div>
+  					<div class="control-group">
+							<label class="control-label" for="inputIntervalCheck">Repeat?</label>
 							<div class="controls">
 								<input type="checkbox" id="inputIntervalCheck" data-toggle="collapse" data-target="#intervalDiv">
 							</div>
-						</div> 
 					</div>
-  
-  
-					<div id="intervalDiv" class="collapse">
+  				
+  					<div id="intervalDiv" class="collapse">
+  						<div class="controls">
+  							Repeat this event every <a href="#" id="recuringInterval">weekday</a>
+  							<br/>
+  							End this event <a href="#" id="shouldRecur">never</a>
+							<input class="date" id="inputEndDate" placeholder="31/12/2012" style="display:none;"/> 
+  						</div>
+  					</div>
+  					<!-- Do not delete this content: alternative design as in mockups -->
+					<!--<div id="intervalDiv" class="collapse">
 						<div class="control-group">
 							<label class="control-label" for="inputInterval">Interval</label>
 							<div class="controls">
@@ -1163,18 +1171,19 @@
 						<div class="control-group">
 							<label class="control-label" for="inputBeginDate">Begin Date:</label>
 							<div class="controls">
-								<input class="date" id="inputBeginDate" />
+								<input class="date" id="inputBeginDate" placeholder="dd/mm/yyyy" />
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="inputEnd">End:</label>
 							<div class="controls">
-								<input type="radio" name="end"> Never <br/>
-								<input type="radio" name="end"> at 
-								<input class="date" id="inputEndDate"/>
+								<input type="radio" name="end" checked="checked"> Never <br/>
+								<input type="radio" name="end" id="atRadio"> at 
+								<input class="date" id="inputEndDate" placeholder="dd/mm/yyyy" onclick="$('#atRadio').attr('checked','checked');"/>
 							</div>
 						</div>  
-					</div>
+					</div>-->
+					<!-- end delete -->
 
 				</form>
 			</div>
@@ -1184,7 +1193,28 @@
 			</div>
 		</div>
 		<!-- END OF MODAL DIALOG -->
-
+		
+		<!-- HTML PlaceHolders -->
+		<div style="display:none;" id="repeatRangePlaceHolder">
+			<div>
+				<input type='radio' name='range' onclick="$('#recuringInterval').text('weekday')">weekday
+			</div>
+			<div>
+				<input type='radio' name='range' onclick="$('#recuringInterval').text('month')">month
+			</div>
+			<div>
+				<input type='radio' name='range' onclick="$('#recuringInterval').text('year')">year
+			</div>
+		</div>
+		<div style="display:none" id="intervalPlaceHolder">
+			<div>
+				<input type='radio' name='end' onclick="$('#shouldRecur').text('never');$('#inputEndDate').hide()" >never
+			</div>
+			<div>
+				<input type='radio' name='end' id="atRadio" onclick="$('#shouldRecur').text('on');$('#inputEndDate').css({display : 'block'})"> on*
+			</div>		
+		</div>
+		<!-- End PlaceHolders -->
 
 		<div class="container pull-right" style="width:8%">
 			<div class="spacer100 akkupositivspace">
