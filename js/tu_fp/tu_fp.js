@@ -30,6 +30,34 @@ $(document).ready(function() {
 		mouseleave: function(ev) {
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
 	}});
+	
+	/* ColorPickers */
+	$('#colorChooserDiv').ColorPicker({
+		flat: true,
+		onShow: function (colpkr) {
+			$(colpkr).fadeIn(500);
+			return false;
+		},
+		onHide: function (colpkr) {
+			$(colpkr).fadeOut(500);
+			return false;
+		},
+		onChange: function (hsb, hex, rgb) {
+			$('#chosenColor').css('background-color', '#' + hex);
+		}
+	});
+	$(".fixedColor").click(function(){
+			$("#chosenColor").css({'background-color' : $(this).css("background-color")});
+	});
+	$(".fixedColor").on({
+		mouseenter: function(ev) {
+			$(this).css({"opacity" : 0.4});
+		},
+		mouseleave: function(ev) {
+			$(this).css({"opacity" : 1});
+	}});
+	
+	/* DatePickers */
 	$(".date").datepicker();
 });
 $(function() {
