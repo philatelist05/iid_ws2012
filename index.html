@@ -713,63 +713,78 @@
 			</div>
 		
 			<div class="tab-pane" id="tu_fp_evaluation_content">
-				<div class="container" style="width:100%;padding:0;margin:0">
+				<div class="container" style="width:100%;padding:0px;margin:0px">
 					<form class="form-horizontal">
 						<div class="row">
 							<div class="control-group" style="float:left">
-								<label class="control-label" for="category">Category:</label>
-								<div class="controls">
-									<select name="category" id="chooseable" style="float:left">
-										<option>All</option>
-										<option>Income</option>
-										<option>Rent</option>
-										<option>Car</option>
-										<option>Energy</option>
-										<option>Insurances</option>
-									</select>
-								</div>
-							</div>
-							<div class="control-group" style="float:left">
 								<div class="control-group" style="float:left">
 									<div class="controls">
-										<input type="radio" name="rgrpp" id="statistics_radio_month" value="month" checked="checked">Month</input>
+										<input type="radio" name="statistics_datetype_select" id="statistics_radio_month" value="month" checked="checked">&nbsp;Month</input>
 									</div>
 									<div class="controls">
-										<input type="radio" name="rgrpp" id="statistics_radio_quarter" value="quarter">Quarter</input>
+										<input type="radio" name="statistics_datetype_select" id="statistics_radio_quarter" value="quarter">&nbsp;Quarter</input>
 									</div>
 									<div class="controls">
-										<input type="radio" name="rgrpp" id="statistics_radio_year" value="year">Year</input>
+										<input type="radio" name="statistics_datetype_select" id="statistics_radio_year" value="year">&nbsp;Year</input>
 									</div>
 								</div>
 							</div>
 							<div class="control-group" style="float:left">
-								<div class="controls" style="float:left">
-									<select name="statistics_year" id="chooseable" style="float:left">
-										<option>2012</option>
-										<option>2011</option>
-										<option>2010</option>
-										<option>2009</option>
-										<option>2008</option>
-										<option>2007</option>
-									</select>
-									<select name="statistics_month" id="chooseable" style="float:left">
-										<option>January</option>
-										<option>February</option>
-										<option>March</option>
-										<option>April</option>
-										<option>May</option>
-										<option>June</option>
-										<option>July</option>
-										<option>August</option>
-										<option>September</option>
-										<option>October</option>
-										<option>November</option>
-										<option>December</option>
-									</select>
+								<div class="controls" style="float:left;margin:15px 20px">
+									<div id="div_statistics_year" style="float:left">
+										<select name="statistics_year" style="float:left">
+											<option>2012</option>
+											<option>2011</option>
+											<option>2010</option>
+										</select>
+									</div>
+									<div id="div_statistics_quarter" style="float:left" hidden>
+										<select name="statistics_quarter" style="float:left">
+											<option>1st quarter</option>
+											<option>2nd quarter</option>
+											<option>3rd quarter</option>
+											<option>4th quarter</option>
+										</select>
+									</div>
+									<div id="div_statistics_month" style="float:left">
+										<select name="statistics_month" style="float:left">
+											<option>January</option>
+											<option>February</option>
+											<option>March</option>
+											<option>April</option>
+											<option>May</option>
+											<option>June</option>
+											<option>July</option>
+											<option>August</option>
+											<option>September</option>
+											<option>October</option>
+											<option>November</option>
+											<option>December</option>
+										</select>
+									</div>
 								</div>
 							</div>
 						</div>
 					</form>
+					<div class="container">
+						<div class="control-group">
+							<label class="control-label" for="category">Category:</label>
+							<div class="controls">
+								<select name="category" id="chooseable" style="float:left">
+									<option>All</option>
+									<option>Income</option>
+									<option>Rent</option>
+									<option>Car</option>
+									<option>Energy</option>
+									<option>Insurances</option>
+								</select>
+							</div>
+						</div>
+						<div class="container pull-left">
+							<img src="img/tu_fp/week_view_graph.png" style="padding:0px 0px" />
+						</div>
+					</div>
+					<div class="container" style="padding:50px 0px">
 					<div style="float:left;background-color:#000000;width:3px;height:430px;margin:0;padding:0"></div>
 					<div style="width:90%;float:left;margin:0;padding:0">
 						<div class="span2" style="width:100%;height:430px;margin:0;padding:0">
@@ -786,6 +801,7 @@
 								<div class="statisticsbardown" style="background-color:#ff9999;height:20px;left:310px" hidden></div>
 							</div>
 						</div>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -953,7 +969,7 @@
 							</div>
 						</div>
 					</div>			
-			
+
 					<div>
 						<div id="example_wrapper" class="dataTables_wrapper" role="grid">
 							<table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" cellpadding="0" border="0" aria-describedby="example_info">

@@ -21,6 +21,20 @@ var showStatisticBars = function() {
 	$(".statisticsbardown").slideDown();
 }
 
+var showSelectedStatisticsDateType = function(){
+	var curr=$("input[name=statistics_datetype_select]:checked").attr("id");
+	if(curr == "statistics_radio_quarter") {
+			$("#div_statistics_month").fadeOut(300, function() {
+			$("#div_statistics_quarter").fadeIn();});
+	} else if(curr == "statistics_radio_month") {
+			$("#div_statistics_quarter").fadeOut(300, function() {
+			$("#div_statistics_month").fadeIn();});
+	} else if(curr == "statistics_radio_year") {
+			$("#div_statistics_quarter").fadeOut(300);
+			$("#div_statistics_month").fadeOut(300);
+	}
+}
+
 $(document).ready(function() {
 	$(".akkupositiv").slideDown();
 	$(".show-grid").on({
@@ -75,11 +89,17 @@ $(document).ready(function() {
 	
 	/* DatePickers */
 	$(".date").datepicker();
+
+	/* Statistics-Month-Quarter-Year-Selection */
+	$("#statistics_radio_month").attr("checked","checked");
+	$("#statistics_radio_quarter").change(showSelectedStatisticsDateType);
+	$("#statistics_radio_month").change(showSelectedStatisticsDateType);
+	$("#statistics_radio_year").change(showSelectedStatisticsDateType);
 });
 
 
 $(function() {
-				var slider  = $('#slider');
+	var slider  = $('#slider');
 	var $div = $("<div id='tooltip'/>")
                     .css({ position : 'absolute' , top : -20, left : 0, display : "block" })
                     .text("12:00");
@@ -111,4 +131,4 @@ $(function() {
 			
 		});
 		
-
+
