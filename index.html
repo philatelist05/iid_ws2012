@@ -935,7 +935,7 @@
 									Filter:
 								</a>
 							</div>
-							<div id="collapseOne" class="accordion-body collapse">
+							<div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
 								<div class="accordion-inner">								
 									<div class="clearfix" Style="width:50%;float:left">
 										<label>From:</label>
@@ -1168,10 +1168,29 @@
   				
   					<div id="intervalDiv" class="collapse">
   						<div class="controls">
-  							Repeat this event every <a href="#" id="recuringInterval">weekday</a>
+  							Repeat this event every <a href="#" id="recuringInterval" data-toggle="collapse" data-target="#repeatRangePlaceHolder">weekday</a>
+							<div class="collapse" id="repeatRangePlaceHolder">
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval').text('weekday');$('#repeatRangePlaceHolder').collapse('hide')">weekday
+								</div>
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval').text('month');$('#repeatRangePlaceHolder').collapse('hide')">month
+								</div>
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval').text('year');$('#repeatRangePlaceHolder').collapse('hide')">year
+								</div>
+							</div>
   							<br/>
-  							End this event <a href="#" id="shouldRecur">never</a>
+  							End this event <a href="#" id="shouldRecur" data-toggle="collapse" data-target="#intervalPlaceHolder">never</a>
 							<input class="date" id="inputEndDate" placeholder="31/12/2012" style="display:none;"/> 
+							<div class="collapse" id="intervalPlaceHolder">
+								<div>
+									<input type='radio' name='end' onclick="$('#shouldRecur').text('never');$('#inputEndDate').hide();$('#intervalPlaceHolder').collapse('hide')" >never
+								</div>
+								<div>
+									<input type='radio' name='end' id="atRadio" onclick="$('#shouldRecur').text('on');$('#inputEndDate').css({display : 'block'});$('#intervalPlaceHolder').collapse('hide')"> on*
+								</div>		
+							</div>
   						</div>
   					</div>
   					<!-- Do not delete this content: alternative design as in mockups -->
@@ -1225,28 +1244,6 @@
 			</div>
 		</div>
 		<!-- END OF MODAL DIALOG -->
-		
-		<!-- HTML PlaceHolders -->
-		<div style="display:none;" id="repeatRangePlaceHolder">
-			<div>
-				<input type='radio' name='range' onclick="$('#recuringInterval').text('weekday')">weekday
-			</div>
-			<div>
-				<input type='radio' name='range' onclick="$('#recuringInterval').text('month')">month
-			</div>
-			<div>
-				<input type='radio' name='range' onclick="$('#recuringInterval').text('year')">year
-			</div>
-		</div>
-		<div style="display:none" id="intervalPlaceHolder">
-			<div>
-				<input type='radio' name='end' onclick="$('#shouldRecur').text('never');$('#inputEndDate').hide()" >never
-			</div>
-			<div>
-				<input type='radio' name='end' id="atRadio" onclick="$('#shouldRecur').text('on');$('#inputEndDate').css({display : 'block'})"> on*
-			</div>		
-		</div>
-		<!-- End PlaceHolders -->
 
 		<div class="container pull-right" style="width:8%">
 			<div class="spacer100 akkupositivspace">
@@ -1258,34 +1255,41 @@
 	</div>
 </div>
 
+<!-- Begin Bootstrap Includes -->
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap-transition.js"></script>
+	<script type="text/javascript" src="js/bootstrap-alert.js"></script>
+	<script type="text/javascript" src="js/bootstrap-modal.js"></script>
+	<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+	<script type="text/javascript" src="js/bootstrap-scrollspy.js"></script>
+	<script type="text/javascript" src="js/bootstrap-tab.js"></script>
+	<script type="text/javascript" src="js/bootstrap-tooltip.js"></script>
+	<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+	<script type="text/javascript" src="js/bootstrap-button.js"></script>
+	<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
+	<script type="text/javascript" src="js/bootstrap-carousel.js"></script>
+	<script type="text/javascript" src="js/bootstrap-typeahead.js"></script>
+	<script type="text/javascript" src="js/bootstrap-affix.js"></script>
 	
-<script src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/holder/holder.js"></script>
+	<script type="text/javascript" src="js/google-code-prettify/prettify.js"></script>
+	
+	<script src="js/application.js"></script>
+ 
+<! -- End Bootstrap JS-->
 
-<script src="js/DataTables-1.9.4/media/js/jquery.js"></script>
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-<script src="js/bootstrap-transition.js"></script>
-<script src="js/bootstrap-alert.js"></script>
-<script src="js/bootstrap-modal.js"></script>
-<script src="js/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap-scrollspy.js"></script>
-<script src="js/bootstrap-tab.js"></script>
-<script src="js/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap-popover.js"></script>
-<script src="js/bootstrap-button.js"></script>
-<script src="js/bootstrap-collapse.js"></script>
-<script src="js/bootstrap-carousel.js"></script>
-<script src="js/bootstrap-typeahead.js"></script>
-<script src="js/bootstrap-affix.js"></script>
 
-<script src="js/holder/holder.js"></script>
-<script src="js/google-code-prettify/prettify.js"></script>
-<script type="text/javascript" charset="utf-8" language="javascript" src="js/DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
-<script type="text/javascript" charset="utf-8" language="javascript" src="js/DataTables-1.9.4/media/js/DT_bootstrap.js"></script>
-<script src="js/application.js"></script>
+<!-- Begin Custom Includes -->
 
-<script src="js/colorpicker.js"></script>
-<script src="js/jquery-ui-1.9.2.custom.js"></script>
-<script src="js/tu_fp/tu_fp.js"></script>
+	<script type="text/javascript" src="js/DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="js/DataTables-1.9.4/media/js/DT_bootstrap.js"></script>
+	
+	<script type="text/javascript" src="js/colorpicker.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.js"></script>
+	
+	<script type="text/javascript" src="js/tu_fp/tu_fp.js"></script>
+<! -- End Bootstrap JS-->
 
 </body>
 </html>
