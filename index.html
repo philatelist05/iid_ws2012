@@ -62,7 +62,7 @@
 						<div class="navbar-search pull-right">
 							<input type="text" id="search" class="search-query" placeholder="Search" onkeypress="openSearch(event,'tu_fp_global_container','tu_fp_search_content','search','tu_fp_search_content_term')">
 						</div>
-					</div><!--/.nav-collapse -->
+					</div>
 				</div>
 				<div>
 					
@@ -76,16 +76,17 @@
 		<div class="container tab-content" id="tu_fp_global_container" style="float:left;width:80%">
 			<div class="tab-pane active" id="tu_fp_home_content" style="width:100%">
 				<div style="width:80%;float:left">
-					<div>
-						<ul class="nav nav-pills" id="myTab">
+					
+						<ul class="nav nav-pills" id="myTab" style="margin:0px">
 							<li><a href="#day" data-toggle="tab">Day</a></li>
 							<li><a href="#week" data-toggle="tab">Week</a></li>
 							<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
-							<li style="float:right"><a href="#">&gt;</a></li>
-							<li style="float:right"><a href="#">Today</a></li>
-							<li style="float:right"><a href="#">&lt;</a></li>
+							<li style="float:right"><a href="#" id="nextMonth">&gt;</a></li>
+							<li style="float:right"><a href="#" id="today">Today</a></li>
+							<li style="float:right"><a href="#" id="prevMonth">&lt;</a></li>
 						</ul>
-					</div>
+						<h3 id="currentDate" style="text-align:center;"></h3>
+					
 					<div class="tab-content">
 						<div id="month" class="tab-pane active rounded">
 							<div class="row" style="margin:0px">
@@ -1300,49 +1301,6 @@
 							</div>
   						</div>
   					</div>
-  					<!-- Do not delete this content: alternative design as in mockups -->
-					<!--<div id="intervalDiv" class="collapse">
-						<div class="control-group">
-							<label class="control-label" for="inputInterval">Interval</label>
-							<div class="controls">
-								<select id="inputInterval">
-									<option>please select ...</option>
-									<option>daily</option>
-									<option>weekly</option>
-									<option>yearly</option>
-									<option></option>
-								</select>
-							</div>
-						</div>   
-						<div class="control-group">
-							<label class="control-label" for="inputWeekday">Weekday:</label>
-							<div class="controls">
-								<input type="checkbox" value="monday"> Mon
-								<input type="checkbox" value="tuesday"> Tue
-								<input type="checkbox" value="wedensday"> Wed
-								<input type="checkbox" value="thursday"> Thu
-								<input type="checkbox" value="friday"> Fri <br/>
-								<input type="checkbox" value="saturday"> Sat
-								<input type="checkbox" value="sunday"> Sun
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputBeginDate">Begin Date:</label>
-							<div class="controls">
-								<input class="date" id="inputBeginDate" placeholder="dd/mm/yyyy" />
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputEnd">End:</label>
-							<div class="controls">
-								<input type="radio" name="end" checked="checked"> Never <br/>
-								<input type="radio" name="end" id="atRadio"> at 
-								<input class="date" id="inputEndDate" placeholder="dd/mm/yyyy" onclick="$('#atRadio').attr('checked','checked');"/>
-							</div>
-						</div>  
-					</div>-->
-					<!-- end delete -->
-
 				</form>
 			</div>
 			<div class="modal-footer">
@@ -1394,6 +1352,8 @@
 	
 	<script type="text/javascript" src="js/colorpicker.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.js"></script>
+	
+	<script type="text/javascript" src="js/date.js"></script>	
 	
 	<script type="text/javascript" src="js/tu_fp/tu_fp.js"></script>
 <! -- End Bootstrap JS-->

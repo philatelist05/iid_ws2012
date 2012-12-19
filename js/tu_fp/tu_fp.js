@@ -16,6 +16,23 @@ function setSearchTerm(inputID,outputID){
 	document.getElementById(inputID).value = '';
 }
 
+function dispDate(now){	
+	var months = new Array();
+	months[0] = "January";
+	months[1] = "February";
+	months[2] = "March";
+	months[3] = "April";
+	months[4] = "May";
+	months[5] = "June";
+	months[6] = "July";
+	months[7] = "August";
+	months[8] = "September";
+	months[9] = "October";
+	months[10] = "November";
+	months[11] = "December";
+	return months[now.getMonth()] + " " + now.getFullYear();
+}
+
 var showStatisticBars = function() {
 	$(".statisticsbarup").slideDown();
 	$(".statisticsbardown").slideDown();
@@ -36,6 +53,9 @@ var showSelectedStatisticsDateType = function(){
 }
 
 $(document).ready(function() {
+	/* Global Date */
+	var now = Date.today();
+	
 	$(".akkupositiv").slideDown();
 	$(".show-grid").on({
 		mouseenter: function(ev) {
@@ -88,6 +108,24 @@ $(document).ready(function() {
 			$('#myTab a:first').tab('show');
 		}
 	});
+	
+	/* Current Date Functions */
+	$("#prevMonth").click(function(){
+		now = now.prev().month();
+		$("#currentDate").text(dispDate(now));
+	});
+	
+	$("#nextMonth").click(function(){
+		now = now.next().month();
+		$("#currentDate").text(dispDate(now));
+	});
+	
+	$("#today").click(function(){
+		now = Date.today();
+		$("#currentDate").text(dispDate(now));
+	});
+	
+	$("#currentDate").text(dispDate(now));
 });
 
 
