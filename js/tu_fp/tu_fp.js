@@ -81,6 +81,13 @@ $(document).ready(function() {
 	$("#statistics_radio_quarter").change(showSelectedStatisticsDateType);
 	$("#statistics_radio_month").change(showSelectedStatisticsDateType);
 	$("#statistics_radio_year").change(showSelectedStatisticsDateType);
+	
+	/* Click Events in Month-View */
+	$(".grid").click(function(event){
+		if(event.target.nodeName.toLowerCase() != "img") {
+			$('#myTab a:first').tab('show');
+		}
+	});
 });
 
 
