@@ -107,3 +107,15 @@
 	height:210px;
 	position:relative;
 }
+
+.weekbg {
+	background-color:#FFFFFF;
+}
+
+.weekbg:hover {
+	background-color:#EEEEEE;
+}
+
+.searchPointer {
+	cursor:pointer;	
+}

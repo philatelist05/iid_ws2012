@@ -16,6 +16,10 @@ function setSearchTerm(inputID,outputID){
 	document.getElementById(inputID).value = '';
 }
 
+function showDayView() {
+	$('#myTab a:first').tab('show');
+}
+
 function dispDate(now){	
 	var months = new Array();
 	months[0] = "January";
@@ -63,6 +67,14 @@ $(document).ready(function() {
 		},
 		mouseleave: function(ev) {
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
+	}});
+	
+	$(".weekbg").on({
+		mouseenter: function(ev) {
+			$(this).children(".addButtonContainer").children("a").children(".plusBild").fadeIn(80);
+		},
+		mouseleave: function(ev) {
+			$(this).children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
 	}});
 	
 	/* ColorPickers */
