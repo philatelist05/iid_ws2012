@@ -56,6 +56,12 @@ var showSelectedStatisticsDateType = function(){
 	}
 }
 
+var simulatePeriodChange = function() {
+	$("#statistics-image").fadeOut(300, function() {
+		$("#statistics-image").fadeIn(300);
+	});
+}
+
 $(document).ready(function() {
 	/* Global Date */
 	var now = Date.today();
@@ -63,10 +69,10 @@ $(document).ready(function() {
 	$(".akkupositiv").slideDown();
 	$(".show-grid").on({
 		mouseenter: function(ev) {
-			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeIn(80);
+			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeIn(400);
 		},
 		mouseleave: function(ev) {
-			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
+			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(30);
 	}});
 	
 	$(".weekbg").on({
@@ -136,8 +142,56 @@ $(document).ready(function() {
 		now = Date.today();
 		$("#currentDate").text(dispDate(now));
 	});
-	
 	$("#currentDate").text(dispDate(now));
+
+	//evaluation - category-chooser:
+	$("#category-chooser").change(function() {
+		if($("#category-chooser").find("option:selected").text() == "[All]") {
+			$("#statistics-image").fadeOut(300, function() {
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-all.png");
+				$("#statistics-image").fadeIn(300);
+			});
+		} else if($("#category-chooser").find("option:selected").text() == "Income") {
+			$("#statistics-image").fadeOut(300, function() {
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-income.png");
+				$("#statistics-image").fadeIn(300);
+			});
+		} else if($("#category-chooser").find("option:selected").text() == "Common") {
+			$("#statistics-image").fadeOut(300, function() {
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-common.png");
+				$("#statistics-image").fadeIn(300);
+			});
+		} else if($("#category-chooser").find("option:selected").text() == "Rent") {
+			$("#statistics-image").fadeOut(300, function() {
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-rent.png");
+				$("#statistics-image").fadeIn(300);
+			});
+		} else if($("#category-chooser").find("option:selected").text() == "Car") {
+			$("#statistics-image").fadeOut(300, function() {
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-car.png");
+				$("#statistics-image").fadeIn(300);
+			});
+		} else if($("#category-chooser").find("option:selected").text() == "Energy") {
+			$("#statistics-image").fadeOut(300, function() {
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-energy.png");
+				$("#statistics-image").fadeIn(300);
+			});
+		} else if($("#category-chooser").find("option:selected").text() == "Insurances") {
+			$("#statistics-image").fadeOut(300, function() {
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-insurances.png");
+				$("#statistics-image").fadeIn(300);
+			});
+		}
+	});
+
+	//evaluation - date-choosers-simulate period-change:
+	$("#category-chooser").val(1);
+	$("#statistics_radio_month").change(simulatePeriodChange);
+	$("#statistics_radio_quarter").change(simulatePeriodChange);
+	$("#statistics_radio_year").change(simulatePeriodChange);
+	$("#div_statistics_month").change(simulatePeriodChange);
+	$("#div_statistics_quarter").change(simulatePeriodChange);
+	$("#div_statistics_year").change(simulatePeriodChange);
 });
 
 
