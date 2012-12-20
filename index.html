@@ -66,7 +66,7 @@
 					</a>
 					
 					<div class="nav-collapse collapse">
-						<ul class="nav">
+						<ul class="nav" id="globalNav">
 							<li class="active"><a href="#tu_fp_home_content" onClick="hideShowDiv('tu_fp_search_content','tu_fp_global_container')" data-toggle="tab">Home</a></li>
 							<li><a href="#tu_fp_evaluation_content" onClick="hideShowDiv('tu_fp_search_content','tu_fp_global_container');showStatisticBars()" data-toggle="tab">Evaluation</a></li>
 							<li><a href="#tu_fp_preferences_content" onClick="hideShowDiv('tu_fp_search_content','tu_fp_global_container')" data-toggle="tab">Preferences</a></li>
@@ -1606,16 +1606,16 @@
 			<div class="tab-pane" id="tu_fp_evaluation_content">
 				<div class="container" style="width:100%;padding:0px;margin:0px">
 					<form class="form-horizontal">
-						<div class="row">
-							<div class="control-group" style="float:left">
+						<div class="row" style="margin-left:0px">
+							<div class="control-group" style="float:left;margin-left:0px">
 								<div class="control-group" style="float:left">
-									<div class="controls">
+									<div class="controls" style="margin-left:0px">
 										<input type="radio" name="statistics_datetype_select" id="statistics_radio_month" value="month" checked="checked">&nbsp;Month</input>
 									</div>
-									<div class="controls">
+									<div class="controls" style="margin-left:0px">
 										<input type="radio" name="statistics_datetype_select" id="statistics_radio_quarter" value="quarter">&nbsp;Quarter</input>
 									</div>
-									<div class="controls">
+									<div class="controls" style="margin-left:0px">
 										<input type="radio" name="statistics_datetype_select" id="statistics_radio_year" value="year">&nbsp;Year</input>
 									</div>
 								</div>
@@ -1629,7 +1629,7 @@
 											<option>2010</option>
 										</select>
 									</div>
-									<div id="div_statistics_quarter" style="float:left" hidden>
+									<div id="div_statistics_quarter" style="float:left;margin-left:5px" hidden>
 										<select name="statistics_quarter" style="float:left">
 											<option>1st quarter</option>
 											<option>2nd quarter</option>
@@ -1637,7 +1637,7 @@
 											<option>4th quarter</option>
 										</select>
 									</div>
-									<div id="div_statistics_month" style="float:left">
+									<div id="div_statistics_month" style="float:left;margin-left:5px">
 										<select name="statistics_month" style="float:left">
 											<option>January</option>
 											<option>February</option>

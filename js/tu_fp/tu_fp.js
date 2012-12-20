@@ -16,8 +16,9 @@ function setSearchTerm(inputID,outputID){
 	document.getElementById(inputID).value = '';
 }
 
-function showDayView() {
+function showDayView() {	
 	$('#myTab a:first').tab('show');
+	$('#globalNav a:first').tab('show');
 }
 
 function dispDate(now){	
