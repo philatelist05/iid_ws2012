@@ -17,7 +17,7 @@ function setSearchTerm(inputID,outputID){
 }
 
 function showDayView() {	
-	$('#myTab a:first').tab('show');
+	$('.myTab a:first').tab('show');
 	$('#globalNav a:first').tab('show');
 }
 
@@ -153,7 +153,7 @@ $(document).ready(function() {
 	/* Click Events in Month-View */
 	$(".grid").click(function(event){
 		if(event.target.nodeName.toLowerCase() != "img") {
-			$('#myTab a:first').tab('show');
+			$('.myTab a:first').tab('show');
 		}
 	});
 	
