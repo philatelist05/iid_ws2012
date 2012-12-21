@@ -39,8 +39,13 @@ function dispDate(now){
 }
 
 var showStatisticBars = function() {
-	$(".statisticsbarup").slideDown();
-	$(".statisticsbardown").slideDown();
+	$(".statisticsbarup").slideDown(350);
+	$(".statisticsbardown").slideDown(350);
+}
+
+var hideStatisticBars = function() {
+	$(".statisticsbarup").fadeOut(10);
+	$(".statisticsbardown").fadeOut(10);
 }
 
 var showSelectedStatisticsDateType = function(){
@@ -60,6 +65,8 @@ var showSelectedStatisticsDateType = function(){
 var simulatePeriodChange = function() {
 	$("#statistics-image").fadeOut(300, function() {
 		$("#statistics-image").fadeIn(300);
+		hideStatisticBars();
+		showStatisticBars();
 	});
 }
 
