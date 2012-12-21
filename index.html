@@ -4361,7 +4361,7 @@
 			<div class="tab-pane" id="tu_fp_preferences_content">
 				<h2 id="tu_fp_preferences_content_header">Preferences</h2>
 								
-					<form class="form-inline" >
+					<!-- <form class="form-inline" > -->
 						<legend>Defaultview</legend>
 							<div class="control-group">
 								<label class="radio inline control-label" tabindex="1" accesskey="d">
@@ -4376,26 +4376,53 @@
 							</div>		
 							
 						<legend>Standard Tablestyle</legend>
-							<label for="chooseable">
-								Chooseable
-							</label>
-							<select name="chooseable" id="chooseable" title="Please choose!" size = "5" multiple>
-								<option>Date</option>
-								<option>Time</option>
-								<option>Value</option>
-								<option>Description</option>
-							</select>
-						
-							<label for="active">
-								Active
-							</label>
-								<select name="active" id="active" title="Please choose!" size = "5" multiple>
-									<option>Time</option>
-									<option>Value</option>
-									<option>Description</option>
-								</select>
-						
+							<table>
+								<tr>
+									<th>
+										Chooseable	
+									</th>
+									<th>
+									</th>
+									<th>
+									</th>
+									<th>
+									</th>
+									<th>
+										Active
+									</th>
+								</tr>
+								<tr>
+									<td>
+										<form name = "choose">
+											<select name="chooseable" size = "5" multiple>
+												<option>Date</option>
+												<option>Time</option>
+												<option>Value</option>
+												<option>Description</option>
+											</select>
+										</form>
+									</td>
+									<td>
+									</td>
+									<td>
+										<p>
+											<button type="submit" class="btn btn-primary" onclick = " move(document.choose.chooseable, document.act.acti)" >-></button>
+										<p>
+											<button type="submit" class="btn btn-primary" onclick = " move(document.act.acti, document.choose.chooseable)" ><-</button>		
+									</td>
+									<td >
+									</td>
+									<td>
+										<form name = "act">
+											<select name="acti" size = "5" multiple>
+												<option> Category </option>
+											</select>
+										</form>
+									</td>
+								</tr>
+							</table>
 						<legend>Sortingstyle</legend>
+						<div style = "form-inline">
 							<label for="sortingstyle">
 							Column
 						</label>
@@ -4406,21 +4433,19 @@
 								<option>Value</option>
 								<option>Description</option>
 							</select>
-							
-						
 							<span>by </span>
+							<div class = "control-group">
+								<div class = "controls" >
+								<label class="radio inline control-label" tabindex="10" accesskey="d">
+									<input type="radio" name = "a" id="ascending" value="as"> Ascending
+								</label>
+								<label class="radio inline control-label" tabindex="10" accesskey="d">
+									<input type="radio" name = "a" id="descending" value="ds"> Descending
+								</label>
+								</div>
+							</div>
 							
-							<label for="rg2as"> Ascending
-							</label>
-							<label class = "radio-inline">
-							<input type="radio" name="rgrp2" id="rg2as" value="as" checked="checked"/>
-							</label>
-							<label for="rg2des">Descending
-							</label>
-							<label class = "radio-inline" >
-							<input type="radio" name="rgrp2" id="rg2des" value="des" />
-							</label>
-				
+						</div>
 					<legend>Define Limits</legend>
 					<div class = "control-group" >
 						<label class = "control-label" for="minB">min. Budgetlimit: 
@@ -4472,7 +4497,7 @@
 							<button type="button" class="btn">Cancel</button>
 						</div>
 					
-				</form>
+				<!-- </form> -->
 			</div>
 	
 		</div>
@@ -4808,6 +4833,8 @@
 	<script type="text/javascript" src="js/date.js"></script>	
 	
 	<script type="text/javascript" src="js/tu_fp/tu_fp.js"></script>
+	<script type="text/javascript" src="js/tu_fp/tu_fp_custom.js"></script>
+	
 <! -- End Bootstrap JS-->
 
 
