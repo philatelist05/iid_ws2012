@@ -66,6 +66,35 @@ var simulatePeriodChange = function() {
 $(document).ready(function() {
 	/* Global Date */
 	var now = Date.today();
+
+	/* calculate random money-values for month-view */
+	$(".money").each(function(index, elem) {
+		var value = 0;
+		var modif = 0;
+		var tmp1 = Math.ceil(Math.random() * 25);
+		if(tmp1 < 15)
+			modif = -10;
+		else if(tmp1 >= 15 && tmp1 < 18)
+			modif = -100;
+		else if(tmp1 >= 18 && tmp1 < 24)
+			modif = 0;
+		else
+			modif = 100;
+
+		value = Math.ceil(Math.random() * 100 * modif) / 100;
+		if(value == 0) {
+			$(this).html("");
+		} else if (value > 0) {
+			$(this).html(value + "&euro;");
+			$(this).addClass("moneypositive");
+		} else {
+			$(this).html(value + "&euro;");
+			$(this).addClass("moneynegative");
+		}
+	});
+	$(".firstday").html("1972,23&euro;");
+	$(".firstday").removeClass("moneynegative");
+	$(".firstday").addClass("moneypositive");
 	
 	$(".akkupositiv").slideDown();
 	$(".show-grid").on({

@@ -10,6 +10,14 @@
 	font-size:16px;
 }
 
+.moneypositive {
+	color:#00aa00;
+}
+
+.moneynegative {
+	color:#ff0000;
+}
+
 .tufinancebrand {
 	display: block;
 	float: left;
