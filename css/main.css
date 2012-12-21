@@ -10,6 +10,14 @@
 	font-size:16px;
 }
 
+.moneypositive {
+	color:#00aa00;
+}
+
+.moneynegative {
+	color:#ff0000;
+}
+
 .tufinancebrand {
 	display: block;
 	float: left;
@@ -43,11 +51,12 @@
 
 .spacer100 { 
 	height: 100px;
-	width: 90%;
+	width: 100%;
 }
 
 .akkupositivspace {
 	height: 200px;
+	width: 100%;
 	background-color: #ffffff;
 	position: relative;
 }
@@ -64,7 +73,8 @@
 
 .akkuline {
 	background-color: #000000;
-	width: 100%;
+	left: 10%;
+	width: 70%;
 	height: 3px;
 }
 
