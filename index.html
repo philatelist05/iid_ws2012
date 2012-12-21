@@ -32,6 +32,14 @@
 		width: 95px;
 		float: none;
 	}
+	#header div {
+		width: 50%;
+	}
+	
+	.tab-content {
+		width: 100%;
+		height: 100%;
+	}
 
 	</style>
 	
@@ -88,17 +96,29 @@
 		<div class="container tab-content" id="tu_fp_global_container" style="float:left;width:80%">
 			<div class="tab-pane active" id="tu_fp_home_content" style="width:100%">
 				<div style="width:80%;float:left">
-					
-						<ul class="nav nav-pills" id="myTab" style="margin:0px">
-							<li><a href="#day" data-toggle="tab">Day</a></li>
-							<li><a href="#week" data-toggle="tab">Week</a></li>
-							<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
-							<li style="float:right"><a href="#" id="nextMonth">&gt;</a></li>
-							<li style="float:right"><a href="#" id="today">Today</a></li>
-							<li style="float:right"><a href="#" id="prevMonth">&lt;</a></li>
-						</ul>
+					<div id="header">
+						<div class="pull-left">
+							<ul class="nav nav-pills" class="myTab" style="margin:0px">
+								<li><a href="#day" data-toggle="tab">Day</a></li>
+								<li><a href="#week" data-toggle="tab">Week</a></li>
+								<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
+							</ul>
+						</div>
+						<div class="pull-left">
+							<ul class="nav nav-pills pull-left" class="myTab" style="margin:0px">
+								<li><a href="#" id="nextMonth">&lt;</a></li>
+								<li><a href="#" id="today">Today</a></li>
+								<li><a href="#" id="prevMonth">&gt;</a></li>
+							</ul>
+							<ul class="nav nav-pills pull-right" style="margin:0px">
+								<li class="active"><a href="#">Grid</a></li>
+								<li><a href="#">Table</a></li>
+							</ul>
+						</div>
+					</div>
+					<div>
 						<h3 id="currentDate" style="text-align:center;"></h3>
-					
+					</div>
 					<div class="tab-content">
 						<div id="month" class="tab-pane active rounded">
 							<div class="row" style="margin:0px">
