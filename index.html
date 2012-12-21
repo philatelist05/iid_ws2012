@@ -4021,23 +4021,27 @@
 							</div>
 						</div>
 						<div id="day" class="tab-pane">
+							<div style="max-height:400px;overflow:scroll;overflow-x:hidden">
 							<table class="table table-bordered">
 								<thead>
 									<tr>
 										<th class="span1" > Time</th>
-										<th style="width:100%;text-align:center"> Mo, 03. Dezember 2012</th>
+										<th style="width:100%;text-align:center"> </th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>00:00</td>
-										<td class="show-grid" style="padding:0px"> 
-											<div class = "span2" style="width:100%;margin-left:0px;margin-right:0px;border-radius:0px;line-height:35px;text-align:left;background-color:#FFFFFF" >
-													<div class="addButtonContainer" style="width:10%;float:left">
+										<td class="show-grid" style="padding:0px">
+											<div class = "span2" style="width:100%;margin-left:0px;margin-right:0px;border-radius:0px;line-height:35px;text-align:left;" >
+											<div class="addButtonContainer" style="width:10%;float:left">
 													<a href="#newRecord" data-toggle="modal"><img class="plusBild" src="img/add.png" hidden></a>&nbsp;
-													</div>
 											</div>
-										</td>
+											<div>
+														 50,20 &euro;, some drinks @ the bar 
+											</div>
+											</div>
+										</td>	
 									</tr>
 									<tr>
 										<td>01:00</td>
@@ -4275,6 +4279,7 @@
 								</tbody>
 							</table>
 							</div>
+						</div>
 						<div id="tableview" class="tab-pane">
 							<div>
 								<div id="tableview_wrapper" class="dataTables_wrapper" role="grid">
@@ -4561,7 +4566,7 @@
 						<legend>Sortingstyle</legend>
 						<div style = "form-inline">
 							<label for="sortingstyle">
-							Column
+								Column
 						</label>
 							<select name="sortingstyle" id="sortingstyle" title="Please choose!">
 								<option>Select one ...</option>
@@ -4573,10 +4578,10 @@
 							<span>by </span>
 							<div class = "control-group">
 								<div class = "controls" >
-								<label class="radio inline control-label" tabindex="10" accesskey="d">
+								<label class="radio inline control-label" tabindex="4" accesskey="a">
 									<input type="radio" name = "a" id="ascending" value="as"> Ascending
 								</label>
-								<label class="radio inline control-label" tabindex="10" accesskey="d">
+								<label class="radio inline control-label" tabindex="5" accesskey="c">
 									<input type="radio" name = "a" id="descending" value="ds"> Descending
 								</label>
 								</div>
@@ -4617,13 +4622,13 @@
 						<div class = "control-group">
 							<label class = "control-label" for = "MonthPeriod" > Default period: </label>	
 							<div class="controls">
-								<label class="radio inline control-label" tabindex="10" accesskey="d">
+								<label class="radio inline control-label" tabindex="6" accesskey="d">
 									<input type="radio" name = "view" id="MonthPeriod" value="monthp"> Month
 								</label>
-								<label class="radio inline control-label" tabindex="11" accesskey="w">
+								<label class="radio inline control-label" tabindex="7" accesskey="w">
 									<input type="radio" name = "view" id="WeekPeriod" value="weekp"> Week
 								</label>
-								<label class="radio inline control-label" tabindex="12" accesskey="m">
+								<label class="radio inline control-label" tabindex="8" accesskey="m">
 									<input type="radio" name = "view" id="YearPeriod" value="yearp"> Year
 								</label>
 							</div>						
