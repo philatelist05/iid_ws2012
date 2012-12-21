@@ -10,6 +10,14 @@
 	font-size:16px;
 }
 
+.todaymarkedstrong {
+	background-color: #f6fa7f;
+}
+
+.todaymarkedweak {
+	background-color: #fcfebf;
+}
+
 .moneypositive {
 	color:#00aa00;
 }

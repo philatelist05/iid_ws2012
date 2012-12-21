@@ -17,7 +17,7 @@ function setSearchTerm(inputID,outputID){
 }
 
 function showDayView() {	
-	$('#myTab a:first').tab('show');
+	$('.myTab a:first').tab('show');
 	$('#globalNav a:first').tab('show');
 }
 
@@ -39,8 +39,13 @@ function dispDate(now){
 }
 
 var showStatisticBars = function() {
-	$(".statisticsbarup").slideDown();
-	$(".statisticsbardown").slideDown();
+	$(".statisticsbarup").slideDown(350);
+	$(".statisticsbardown").slideDown(350);
+}
+
+var hideStatisticBars = function() {
+	$(".statisticsbarup").fadeOut(10);
+	$(".statisticsbardown").fadeOut(10);
 }
 
 var showSelectedStatisticsDateType = function(){
@@ -60,6 +65,8 @@ var showSelectedStatisticsDateType = function(){
 var simulatePeriodChange = function() {
 	$("#statistics-image").fadeOut(300, function() {
 		$("#statistics-image").fadeIn(300);
+		hideStatisticBars();
+		showStatisticBars();
 	});
 }
 
@@ -153,7 +160,7 @@ $(document).ready(function() {
 	/* Click Events in Month-View */
 	$(".grid").click(function(event){
 		if(event.target.nodeName.toLowerCase() != "img") {
-			$('#myTab a:first').tab('show');
+			$('.myTab a:first').tab('show');
 		}
 	});
 	
@@ -181,9 +188,9 @@ $(document).ready(function() {
 				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-all.png");
 				$("#statistics-image").fadeIn(300);
 			});
-		} else if($("#category-chooser").find("option:selected").text() == "Income") {
+		} else if($("#category-chooser").find("option:selected").text() == "Salary") {
 			$("#statistics-image").fadeOut(300, function() {
-				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-income.png");
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-salary.png");
 				$("#statistics-image").fadeIn(300);
 			});
 		} else if($("#category-chooser").find("option:selected").text() == "Common") {
@@ -258,4 +265,6 @@ $(function() {
 			
 		});
 		
-
+$('.accordion').on('show hide', function(e){
+    $(e.target).siblings('.accordion-heading').find('.accordion-toggle i').toggleClass('icon-arrow-down icon-arrow-up', 200);
+});

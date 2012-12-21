@@ -32,6 +32,14 @@
 		width: 95px;
 		float: none;
 	}
+	#header div {
+		width: 50%;
+	}
+	
+	.tab-content {
+		width: 100%;
+		height: 100%;
+	}
 
 	</style>
 	
@@ -88,17 +96,29 @@
 		<div class="container tab-content" id="tu_fp_global_container" style="float:left;width:80%">
 			<div class="tab-pane active" id="tu_fp_home_content" style="width:100%">
 				<div style="width:80%;float:left">
-					
-						<ul class="nav nav-pills" id="myTab" style="margin:0px">
-							<li><a href="#day" data-toggle="tab">Day</a></li>
-							<li><a href="#week" data-toggle="tab">Week</a></li>
-							<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
-							<li style="float:right"><a href="#" id="nextMonth">&gt;</a></li>
-							<li style="float:right"><a href="#" id="today">Today</a></li>
-							<li style="float:right"><a href="#" id="prevMonth">&lt;</a></li>
-						</ul>
+					<div id="header">
+						<div class="pull-left">
+							<ul class="nav nav-pills" class="myTab" style="margin:0px">
+								<li><a href="#day" data-toggle="tab">Day</a></li>
+								<li><a href="#week" data-toggle="tab">Week</a></li>
+								<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
+							</ul>
+						</div>
+						<div class="pull-left">
+							<ul class="nav nav-pills pull-left" class="myTab" style="margin:0px">
+								<li><a href="#" id="nextMonth">&lt;</a></li>
+								<li><a href="#" id="today">Today</a></li>
+								<li><a href="#" id="prevMonth">&gt;</a></li>
+							</ul>
+							<ul class="nav nav-pills pull-right" style="margin:0px">
+								<li class="active"><a href="#">Grid</a></li>
+								<li><a href="#">Table</a></li>
+							</ul>
+						</div>
+					</div>
+					<div>
 						<h3 id="currentDate" style="text-align:center;"></h3>
-					
+					</div>
 					<div class="tab-content">
 						<div id="month" class="tab-pane active rounded">
 							<div class="row" style="margin:0px">
@@ -143,7 +163,7 @@
 								</div>
 								<div>
 									<div class="show-grid" style="margin:0px">
-										<div class="span2 grid monthbutton" style="margin:5px;width:12.7%">
+										<div class="span2 grid monthbutton" style="margin:5px;width:12.7%;background-color: #f6fa7f;">
 											<div class="addButtonContainer" style="width:50%;float:left">
 												<a href="#newRecord" data-toggle="modal"><img class="plusBild" src="img/add.png" hidden></a>&nbsp;
 											</div>
@@ -399,7 +419,7 @@
 								</div>
 								<div>
 									<div class="show-grid" style="margin:0px">
-										<div class="span2 grid monthbutton" style="margin:5px;width:12.7%;background-color: #f6fa7f;">
+										<div class="span2 grid monthbutton" style="margin:5px;width:12.7%">
 											<div class="addButtonContainer" style="width:50%;float:left">
 												<a href="#newRecord" data-toggle="modal"><img class="plusBild" src="img/add.png" hidden></a>&nbsp;
 											</div>
@@ -528,7 +548,7 @@
 										<tr>
 											<th>Time</th>
 											<th>03.12.</th>
-											<th>04.12.</th>
+											<th class="todaymarkedstrong">04.12.</th>
 											<th>05.12.</th>
 											<th>06.12.</th>
 											<th>07.12.</th>
@@ -564,7 +584,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&euro;500</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&euro;500</p>
 														</div>
 													</div>
 												</div>
@@ -672,7 +692,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -780,7 +800,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -888,7 +908,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -996,7 +1016,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -1104,7 +1124,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -1212,7 +1232,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -1320,7 +1340,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -1428,7 +1448,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&euro;500</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&euro;500</p>
 														</div>
 													</div>
 												</div>
@@ -1536,7 +1556,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -1644,7 +1664,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -1752,7 +1772,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -1860,7 +1880,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -1968,7 +1988,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -2076,7 +2096,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -2184,7 +2204,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -2292,7 +2312,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&euro;500</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&euro;500</p>
 														</div>
 													</div>
 												</div>
@@ -2400,7 +2420,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -2508,7 +2528,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -2616,7 +2636,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -2724,7 +2744,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -2832,7 +2852,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -2940,7 +2960,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -3048,7 +3068,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -3156,7 +3176,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&euro;500</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&euro;500</p>
 														</div>
 													</div>
 												</div>
@@ -3264,7 +3284,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -3372,7 +3392,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -3480,7 +3500,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -3588,7 +3608,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -3696,7 +3716,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -3804,7 +3824,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -3912,7 +3932,7 @@
 															<div style="width:50%;float:left;line-height:20px">
 																&nbsp;
 															</div>
-															<p style="margin:0px;line-height:20px">&nbsp;</p>
+															<p class="todaymarkedweak" style="margin:0px;line-height:20px">&nbsp;</p>
 														</div>
 													</div>
 												</div>
@@ -4255,6 +4275,123 @@
 								</tbody>
 							</table>
 							</div>
+						<div id="tableview" class="tab-pane">
+							<div>
+								<div id="tableview_wrapper" class="dataTables_wrapper" role="grid">
+									<table id="tableview_table" class="table table-bordered dataTable table-hover" cellspacing="0" cellpadding="0" border="0" aria-describedby="example_info">
+										<thead>
+											<tr role="row">
+												<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Date: activate to sort column descending">Date</th>
+												<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Time: activate to sort column ascending">Time</th>
+												<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Value: activate to sort column ascending">Value</th>
+												<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Description: activate to sort column ascending">Description</th>
+												<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending">Category</th>
+											</tr>
+										</thead>
+										<tbody role="alert" aria-live="polite" aria-relevant="all">
+											<tr class="gradeA odd success">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">01.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">3500&euro;</td>
+												<td class="center ">Salary</td>
+												<td class="center ">Salary</td>
+											</tr>
+											<tr class="gradeA odd info">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">03.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">-200&euro;</td>
+												<td class="center ">Playstation 4</td>
+												<td class="center ">IT</td>
+											</tr>
+											<tr class="gradeA even">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">05.12.2012</td>
+												<td class=" ">17:00</td>
+												<td class=" ">-105&euro;</td>
+												<td class="center ">E-Guitar Pickups</td>
+												<td class="center ">Music</td>
+											</tr>
+											<tr class="gradeA odd">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">-35&euro;</td>
+												<td class="center ">Lunch</td>
+												<td class="center ">Food</td>
+											</tr>
+											<tr class="gradeA even">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">17:00</td>
+												<td class=" ">-350&euro;</td>
+												<td class="center ">new door</td>
+												<td class="center ">Misc</td>
+											</tr>
+											<tr class="gradeA odd">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">-48&euro;</td>
+												<td class="center ">Christmas present</td>
+												<td class="center ">Present</td>
+											</tr>
+												<tr class="gradeA odd">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">17:00</td>
+												<td class=" ">-10&euro;</td>
+												<td class="center ">Vegetables</td>
+												<td class="center ">Food</td>
+											</tr>
+											<tr class="gradeA odd">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">-16&euro;</td>
+												<td class="center ">Ticket</td>
+												<td class="center ">Misc</td>
+											</tr>
+											<tr class="gradeA odd info">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">-90&euro;</td>
+												<td class="center ">Playstation 4 Games</td>
+												<td class="center ">IT</td>
+											</tr>
+											<tr class="gradeA even">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">17:00</td>
+												<td class=" ">-71&euro;</td>
+												<td class="center ">Trousers</td>
+												<td class="center ">Misc</td>
+											</tr>
+											<tr class="gradeA odd">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">-24&euro;</td>
+												<td class="center ">Cinema Tickets</td>
+												<td class="center ">Misc</td>
+											</tr>
+											<tr class="gradeA even info">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<td class=" ">17:00</td>
+												<td class=" ">-47&euro;</td>
+												<td class="center ">New tires</td>
+												<td class="center ">IT</td>
+											</tr>
+											<tr class="gradeA odd">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">-1&euro;</td>
+												<td class="center ">Hamburger</td>
+												<td class="center ">Food</td>
+											</tr>
+											<tr class="gradeA even info">
+												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
+												<td class=" ">08:00</td>
+												<td class=" ">-63&euro;</td>
+												<td class="center ">New RAM</td>
+												<td class="center ">IT</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -4319,7 +4456,7 @@
 								<label class="control-label" for="category-chooser" style="width:80px">Category:&nbsp;</label>
 								<select name="category" id="category-chooser">
 									<option selected>[All]</option>
-									<option>Income</option>
+									<option>Salary</option>
 									<option>Car</option>
 									<option>Common</option>
 									<option>Energy</option>
@@ -4339,7 +4476,7 @@
 						</div>
 						<div class="span2" style="width:90%;height:430px;margin:0;padding:0">
 							<div class="statisticsspace">
-								<div class="statisticsbarup" style="background-color:#aaaaee;height:180px;left:10px" hidden>Income</div>
+								<div class="statisticsbarup" style="background-color:#aaaaee;height:180px;left:10px" hidden>Salary</div>
 								<div class="statisticsbarup" style="background-color:#ffaaaa;height:30px;left:310px" hidden>Insurances
 									<div class="statisticsbarup" style="background-color:#2173fa;height:10px" hidden></div>
 								</div>
@@ -4510,20 +4647,20 @@
 						<div class="accordion-group">
 							<div class="accordion-heading">
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#tu_fp_search_content_filter" href="#collapseOne">
-									Filter:
+									Filter <i class="icon-arrow-up"></i>
 								</a>
 							</div>
 							<div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
 								<div class="accordion-inner">								
 									<div class="clearfix" Style="width:50%;float:left">
-										<label>From:</label>
+										<label>Begin Date:</label>
 										<div class="input">
 											<input class="xlarge disabled date" placeholder=""/>
 										</div>
 									</div>
 								
 									<div class="clearfix" Style="width:50%;float:left">
-										<label>To:</label>
+										<label>End Date:</label>
 										<div class="input">
 											<input class="xlarge disabled date" placeholder=""/>
 										</div>
