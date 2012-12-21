@@ -188,9 +188,9 @@ $(document).ready(function() {
 				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-all.png");
 				$("#statistics-image").fadeIn(300);
 			});
-		} else if($("#category-chooser").find("option:selected").text() == "Income") {
+		} else if($("#category-chooser").find("option:selected").text() == "Salary") {
 			$("#statistics-image").fadeOut(300, function() {
-				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-income.png");
+				$("#statistics-image").attr("src", "img/tu_fp/evaluation/statistics-salary.png");
 				$("#statistics-image").fadeIn(300);
 			});
 		} else if($("#category-chooser").find("option:selected").text() == "Common") {
