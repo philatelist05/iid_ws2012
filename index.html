@@ -3777,7 +3777,7 @@
 			
 						<div class="form-actions">
 							<button type="submit" class="btn btn-primary">Save changes</button>
-							<button type="button" class="btn">Cancel</button>
+							<button type="button" class="btn">Close</button>
 						</div>
 					
 				<!-- </form> -->
@@ -3965,7 +3965,7 @@
 		
 
 	
-	<!-- BEGIN OF MODAL DIALOG -->
+	<!-- BEGIN OF MODAL New Record DIALOG -->
 		<div id="newRecord" class="modal hide fade">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -3989,7 +3989,7 @@
 						<label class="control-label" for="inputTime">Time:</label>
 						<div class="controls">
 							<div style="width:100%">
-								<div id="slider"></div>
+								<div class="slider"></div>
 							</div>
 						</div>
 					</div>
@@ -4077,6 +4077,121 @@
 			</div>
 		</div>
 	<!-- END OF MODAL DIALOG -->
+	
+	<!-- BEGIN OF MODAL Edit Record DIALOG -->
+		<div id="editRecord" class="modal hide fade">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3>Edit Entry</h3>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="inputValue">Value:</label>
+						<div class="controls">
+							<input type="text" value="200"/>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputDescription">Name / Description:</label>
+						<div class="controls">
+							<textarea rows="5">Playstation 4</textarea>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputTime">Time:</label>
+						<div class="controls">
+							<div style="width:100%">
+								<div class="slider"></div>
+							</div>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputVerification">Verification (e.g. bill):</label>
+						<div class="controls">
+							<input type="file" placeholder="inputVerification"/>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputCategory">Category</label>
+						<div class="controls">
+							<select>
+								<option>please select ...</option>
+								<option>Rent</option>
+								<option>Car</option>
+								<option selected>IT</option>
+								<option>Energy</option>
+							</select>
+							<a href="#" data-toggle="collapse" data-target="#categoryDiv1"><img class="plusBild" src="img/add.png"></a>
+						</div>
+					</div>
+  
+  
+					<div id="categoryDiv1" class="collapse">
+						<div class="control-group">
+							<label class="control-label" for="inputCategoryName">Category Name:</label>
+							<div class="controls">
+								<input type="text" placeholder="Name"/>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputColor">Color:</label>
+							<div class="controls">
+								<div id="chosenColor1" class="well well-small" style="padding:0px;float:left;width:60px;margin-right:30px;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:red;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:green;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:blue;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:yellow;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:gray;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:magenta;width:20px;;border:1px solid;"></div>
+								<a href="#" data-toggle="collapse" data-target="#colorChooserDiv1">more ...</a>
+								<div id="colorChooserDiv1" class="collapse"></div>
+							</div>
+						</div>    
+					</div>
+  					<div class="control-group">
+							<label class="control-label" for="inputIntervalCheck">Repeat?</label>
+							<div class="controls">
+								<input type="checkbox" data-toggle="collapse" data-target="#intervalDiv1">
+							</div>
+					</div>
+  				
+  					<div id="intervalDiv1" class="collapse">
+  						<div class="controls">
+  							Repeat this event every <a href="#" id="recuringInterval1" data-toggle="collapse" data-target="#repeatRangePlaceHolder1">weekday</a>
+							<div class="collapse" id="repeatRangePlaceHolder1">
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval1').text('weekday');$('#repeatRangePlaceHolder1').collapse('hide')">weekday
+								</div>
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval1').text('month');$('#repeatRangePlaceHolder1').collapse('hide')">month
+								</div>
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval1').text('year');$('#repeatRangePlaceHolder1').collapse('hide')">year
+								</div>
+							</div>
+  							<br/>
+  							End this event <a href="#" id="shouldRecur1" data-toggle="collapse" data-target="#intervalPlaceHolder1">never</a>
+							<input class="date" id="inputEndDate1" placeholder="31/12/2012" style="display:none;"/> 
+							<div class="collapse" id="intervalPlaceHolder1">
+								<div>
+									<input type='radio' name='end' onclick="$('#shouldRecur1').text('never');$('#inputEndDate1').hide();$('#intervalPlaceHolder1').collapse('hide')" >never
+								</div>
+								<div>
+									<input type='radio' name='end' id="atRadio1" onclick="$('#shouldRecur1').text('on');$('#inputEndDate1').css({display : 'block'});$('#intervalPlaceHolder1').collapse('hide')"> on*
+								</div>		
+							</div>
+  						</div>
+  					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				<a href="#" class="btn btn-primary">Save</a>
+			</div>
+		</div>
+	<!-- END OF MODAL DIALOG -->	
+	
 	</div>
 </div>
 
@@ -4102,7 +4217,7 @@
 	
 	<script src="js/application.js"></script>
  
-<! -- End Bootstrap JS-->
+<!-- End Bootstrap JS-->
 
 
 <!-- Begin Custom Includes -->
@@ -4120,7 +4235,7 @@
 	<script type="text/javascript" src="js/tu_fp/tu_fp.js"></script>
 	<script type="text/javascript" src="js/tu_fp/tu_fp_custom.js"></script>
 	
-<! -- End Bootstrap JS-->
+<!-- End Bootstrap JS-->
 
 
 

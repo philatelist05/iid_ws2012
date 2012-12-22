@@ -133,13 +133,13 @@ $(document).ready(function() {
 		var modif = 0;
 		var tmp1 = Math.ceil(Math.random() * 25);
 		if(tmp1 < 15)
-			modif = -10;
+		modif = -10;
 		else if(tmp1 >= 15 && tmp1 < 18)
-			modif = -100;
+		modif = -100;
 		else if(tmp1 >= 18 && tmp1 < 24)
-			modif = 0;
+		modif = 0;
 		else
-			modif = 100;
+		modif = 100;
 
 		value = Math.ceil(Math.random() * 100 * modif) / 100;
 		if(value == 0) {
@@ -151,10 +151,27 @@ $(document).ready(function() {
 			$(this).html(value + "&euro;");
 			$(this).addClass("moneynegative");
 		}
+
+		if(value != 0) {
+			var img = $(this).prevAll();
+			var div = img.last();
+			var a = $(div).find("a");
+			var image = $(div).find("img");
+			image.attr("src", "img/edit.png");
+			a.attr("href", "#editRecord");
+		}
 	});
+	
 	$(".firstday").html("1972,23&euro;");
 	$(".firstday").removeClass("moneynegative");
 	$(".firstday").addClass("moneypositive");
+	var img = $(".firstday").prevAll();
+	var div = img.last();
+	var a = $(div).find("a");
+	var image = $(div).find("img");
+	image.attr("src", "img/edit.png");
+	a.attr("href", "#editRecord");
+	
 	
 	$(".akkupositiv").slideDown();
 	$(".show-grid").on({
@@ -188,8 +205,25 @@ $(document).ready(function() {
 			$('#chosenColor').css('background-color', '#' + hex);
 		}
 	});
+	$('#colorChooserDiv1').ColorPicker({
+		flat: true,
+		onShow: function (colpkr) {
+			$(colpkr).fadeIn(500);
+			return false;
+		},
+		onHide: function (colpkr) {
+			$(colpkr).fadeOut(500);
+			return false;
+		},
+		onChange: function (hsb, hex, rgb) {
+			$('#chosenColor').css('background-color', '#' + hex);
+		}
+	});
 	$(".fixedColor").click(function(){
 			$("#chosenColor").css({'background-color' : $(this).css("background-color")});
+	});
+	$(".fixedColor1").click(function(){
+			$("#chosenColor1").css({'background-color' : $(this).css("background-color")});
 	});
 	$(".fixedColor").on({
 		mouseenter: function(ev) {
@@ -198,7 +232,13 @@ $(document).ready(function() {
 		mouseleave: function(ev) {
 			$(this).css({"opacity" : 1});
 	}});
-	
+	$(".fixedColor1").on({
+		mouseenter: function(ev) {
+			$(this).css({"opacity" : 0.4});
+		},
+		mouseleave: function(ev) {
+			$(this).css({"opacity" : 1});
+	}});
 	
 	
 	/* DatePickers */
@@ -314,7 +354,7 @@ $(document).ready(function() {
 
 
 $(function() {
-	var slider  = $('#slider');
+	var slider  = $('.slider');
 	var $div = $("<div id='tooltip'/>")
                     .css({ position : 'absolute' , top : -20, left : 0, display : "block" })
                     .text("12:00");
