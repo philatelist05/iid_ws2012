@@ -21,6 +21,9 @@
 	.grid {
 		cursor:pointer;	
 	}
+	li {
+		cursor:pointer;	
+	}
 	.addButtonContainer {
 		max-height: 40px;
 	}
@@ -98,21 +101,21 @@
 				<div style="width:80%;float:left">
 					<div id="header">
 						<div class="pull-left">
-							<ul class="nav nav-pills" class="myTab" style="margin:0px">
+							<ul class="nav nav-pills myTab time" style="margin:0px">
 								<li><a href="#day" data-toggle="tab">Day</a></li>
 								<li><a href="#week" data-toggle="tab">Week</a></li>
 								<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
 							</ul>
 						</div>
 						<div class="pull-left">
-							<ul class="nav nav-pills pull-left" class="myTab" style="margin:0px">
+							<ul class="nav nav-pills pull-left myTab" style="margin:0px">
 								<li><a href="#" id="nextMonth">&lt;</a></li>
 								<li><a href="#" id="today">Today</a></li>
 								<li><a href="#" id="prevMonth">&gt;</a></li>
 							</ul>
-							<ul class="nav nav-pills pull-right" style="margin:0px">
-								<li class="active"><a href="#">Grid</a></li>
-								<li><a href="#">Table</a></li>
+							<ul class="nav nav-pills pull-right layout" style="margin:0px">
+								<li class="active"><a id="grid" data-toggle="tab">Grid</a></li>
+								<li><a href="#tableview" data-toggle="tab" id="table">Table</a></li>
 							</ul>
 						</div>
 					</div>

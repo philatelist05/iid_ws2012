@@ -73,6 +73,10 @@ var simulatePeriodChange = function() {
 $(document).ready(function() {
 	/* Global Date */
 	var now = Date.today();
+	
+	var granularity = $(".time a:last");
+	
+	var mode = "grid";
 
 	/* calculate random money-values for month-view */
 	$(".money").each(function(index, elem) {
@@ -220,6 +224,32 @@ $(document).ready(function() {
 			});
 		}
 	});
+	
+	
+	$("#grid").click(function(e){
+		mode = "grid";
+		href = granularity.attr("href");	
+		$(".time a[href='#week']").tab("show");
+		$(".time a[href='#day']").tab("show");
+		$(".time a[href='#month']").tab("show");
+		$(".time a[href='" + href + "']").tab("show");
+
+	});
+	
+	$("#table").click(function(){
+		mode = "table";
+	});
+	
+	
+	$(".time a").click(function(){
+		granularity = $(this);
+	});
+	
+	$('.time a[data-toggle="tab"]').on('shown', function (e) {
+		if(mode == "table"){
+			$(".layout a").tab("show");
+		}
+	})
 
 	//evaluation - date-choosers-simulate period-change:
 	$("#category-chooser").val(1);
