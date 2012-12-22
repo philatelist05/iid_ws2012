@@ -148,8 +148,9 @@ if ( $.fn.DataTable.TableTools ) {
 /* Table initialisation */
 $(document).ready(function() {
 	$('#example').dataTable();
-	var oTable = $('#example').dataTable();
+	$('#tableview_table').dataTable();
+	//var oTable = $('#example').dataTable();
 	
 	// Sometime later - filter...
-	oTable.fnFilter( 'test string' );
+	//oTable.fnFilter( 'test string' );
 } );
