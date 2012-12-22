@@ -21,21 +21,70 @@ function showDayView() {
 	$('#globalNav a:first').tab('show');
 }
 
+function nextDate(now){
+	var gran = $(".time .active a").attr("href");
+	if(gran == "#month"){
+		return now.next().month();
+	}
+	else if(gran == "#week"){
+		return now.next().week();
+	}
+	else if(gran == "#day"){
+		return now.next().day();
+	}
+}
+
+function prevDate(now){
+	var gran = $(".time .active a").attr("href");
+	if(gran == "#month"){
+		return now.prev().month();
+	}
+	else if(gran == "#week"){
+		return now.prev().week();
+	}
+	else if(gran == "#day"){
+		return now.prev().day();
+	}
+}
+
 function dispDate(now){	
-	var months = new Array();
-	months[0] = "January";
-	months[1] = "February";
-	months[2] = "March";
-	months[3] = "April";
-	months[4] = "May";
-	months[5] = "June";
-	months[6] = "July";
-	months[7] = "August";
-	months[8] = "September";
-	months[9] = "October";
-	months[10] = "November";
-	months[11] = "December";
-	return months[now.getMonth()] + " " + now.getFullYear();
+	var gran = $(".time .active a").attr("href");
+	if(gran == "#month"){
+		var months = new Array();
+		months[0] = "January";
+		months[1] = "February";
+		months[2] = "March";
+		months[3] = "April";
+		months[4] = "May";
+		months[5] = "June";
+		months[6] = "July";
+		months[7] = "August";
+		months[8] = "September";
+		months[9] = "October";
+		months[10] = "November";
+		months[11] = "December";
+		return months[now.getMonth()] + " " + now.getFullYear();
+	}
+	else if(gran == "#week"){
+		var weekNumber = Number(now.format("%U")) + 1;
+		return weekNumber + " Week " + now.getFullYear();
+	}
+	else if(gran == "#day") {
+		var months = new Array();
+		months[0] = "January";
+		months[1] = "February";
+		months[2] = "March";
+		months[3] = "April";
+		months[4] = "May";
+		months[5] = "June";
+		months[6] = "July";
+		months[7] = "August";
+		months[8] = "September";
+		months[9] = "October";
+		months[10] = "November";
+		months[11] = "December";
+		return Number(now.toString("dd")) + " " + months[now.getMonth()] + " " + now.getFullYear();
+	}
 }
 
 var showStatisticBars = function() {
@@ -170,12 +219,12 @@ $(document).ready(function() {
 	
 	/* Current Date Functions */
 	$("#prevMonth").click(function(){
-		now = now.prev().month();
+		now = prevDate(now)
 		$("#currentDate").text(dispDate(now));
 	});
 	
 	$("#nextMonth").click(function(){
-		now = now.next().month();
+		now = nextDate(now)
 		$("#currentDate").text(dispDate(now));
 	});
 	
@@ -242,6 +291,7 @@ $(document).ready(function() {
 	
 	
 	$(".time a").click(function(){
+		$("#currentDate").text(dispDate(now));
 		granularity = $(this);
 	});
 	
@@ -249,6 +299,7 @@ $(document).ready(function() {
 		if(mode == "table"){
 			$(".layout a").tab("show");
 		}
+		$("#currentDate").text(dispDate(now));
 	})
 
 	//evaluation - date-choosers-simulate period-change:
