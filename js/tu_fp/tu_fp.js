@@ -139,16 +139,16 @@ var showDay = function() {
 		$("#currentperiodinfotitle").fadeIn(350);
 	});
 	$("#currentperiodinfomoneypos").fadeOut(350, function() {
-		$("#currentperiodinfomoneypos").html(" 0,00 &euro;");
+		$("#currentperiodinfomoneypos").html(" 0.00 &euro;");
 		$("#currentperiodinfomoneypos").fadeIn(350);
 	});
 
 	$("#currentperiodinfomoneyneg").fadeOut(350, function() {
-		$("#currentperiodinfomoneyneg").html(" 22,53 &euro;");
+		$("#currentperiodinfomoneyneg").html(" 22.53 &euro;");
 		$("#currentperiodinfomoneyneg").fadeIn(350);
 	});
 	$("#currentperiodinfomoneysaldo").fadeOut(350, function() {
-		$("#currentperiodinfomoneysaldo").html(" 143,20 &euro;");
+		$("#currentperiodinfomoneysaldo").html(" 143.20 &euro;");
 		$("#currentperiodinfomoneysaldo").removeClass("moneynegative");
 		$("#currentperiodinfomoneysaldo").removeClass("moneypositive");
 		$("#currentperiodinfomoneysaldo").addClass("moneynegative");
@@ -161,16 +161,16 @@ var showWeek = function() {
 		$("#currentperiodinfotitle").fadeIn(350);
 	});
 	$("#currentperiodinfomoneypos").fadeOut(350, function() {
-		$("#currentperiodinfomoneypos").html(" 0,00 &euro;");
+		$("#currentperiodinfomoneypos").html(" 0.00 &euro;");
 		$("#currentperiodinfomoneypos").fadeIn(350);
 	});
 
 	$("#currentperiodinfomoneyneg").fadeOut(350, function() {
-		$("#currentperiodinfomoneyneg").html(" 143,20 &euro;");
+		$("#currentperiodinfomoneyneg").html(" 143.20 &euro;");
 		$("#currentperiodinfomoneyneg").fadeIn(350);
 	});
 	$("#currentperiodinfomoneysaldo").fadeOut(350, function() {
-		$("#currentperiodinfomoneysaldo").html(" 143,20 &euro;");
+		$("#currentperiodinfomoneysaldo").html(" 143.20 &euro;");
 		$("#currentperiodinfomoneysaldo").removeClass("moneynegative");
 		$("#currentperiodinfomoneysaldo").removeClass("moneypositive");
 		$("#currentperiodinfomoneysaldo").addClass("moneynegative");
@@ -183,16 +183,16 @@ var showMonth = function() {
 		$("#currentperiodinfotitle").fadeIn(350);
 	});
 	$("#currentperiodinfomoneypos").fadeOut(350, function() {
-		$("#currentperiodinfomoneypos").html(" 1972,52&euro;");
+		$("#currentperiodinfomoneypos").html(" 1972.52&euro;");
 		$("#currentperiodinfomoneypos").fadeIn(350);
 	});
 
 	$("#currentperiodinfomoneyneg").fadeOut(350, function() {
-		$("#currentperiodinfomoneyneg").html(" 1598,32&euro;");
+		$("#currentperiodinfomoneyneg").html(" 1598.32&euro;");
 		$("#currentperiodinfomoneyneg").fadeIn(350);
 	});
 	$("#currentperiodinfomoneysaldo").fadeOut(350, function() {
-		$("#currentperiodinfomoneysaldo").html(" 374,20&euro;");
+		$("#currentperiodinfomoneysaldo").html(" 374.20&euro;");
 		$("#currentperiodinfomoneysaldo").removeClass("moneynegative");
 		$("#currentperiodinfomoneysaldo").removeClass("moneypositive");
 		$("#currentperiodinfomoneysaldo").addClass("moneypositive");
