@@ -102,7 +102,7 @@
 				<div style="width:80%;float:left">
 					<div id="header">
 						<div class="pull-left">
-							<ul class="nav nav-pills myTab time" style="margin:0px">
+							<ul id="tabPeriodChange" class="nav nav-pills myTab time" style="margin:0px">
 								<li><a href="#day" data-toggle="tab">Day</a></li>
 								<li><a href="#week" data-toggle="tab">Week</a></li>
 								<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
@@ -3674,23 +3674,32 @@
 					</div>
 				</div>
 			</div>
+	
+			<div id="currentperiodinfo" class="container" style="width:15%;clear:none;float:left;position:relative;padding-left:10px">
+				<div class="spacer100" style="position:absolute;bottom:0;height:50%;top:90px">
+					<p><font style="font-weight: bold" id="currentperiodinfotitle">viewing month</font><br />
+					total income:<font id="currentperiodinfomoneypos" class="moneypositive"> 1972,52&euro;</font><br />
+					total spendings:<font id="currentperiodinfomoneyneg" class="moneynegative"> 1598,32&euro;</font><br />
+					saldo:<font id="currentperiodinfomoneysaldo" class="moneypositive"> 374,20&euro;</font></p>
+				</div>
+			</div>
 		
 			<div class="tab-pane" id="tu_fp_preferences_content">
 				<h2 id="tu_fp_preferences_content_header">Preferences</h2>
 								
 					<!-- <form class="form-inline" > -->
 						<legend>Defaultview</legend>
-							<div class="control-group">
-								<label class="radio inline control-label" tabindex="1" accesskey="d">
-									<input type="radio" name = "view" id="DayView" value="day"> Day
-								</label>
-								<label class="radio inline control-label" tabindex="2" accesskey="w">
-									<input type="radio" name = "view" id="WeekView" value="week"> Week
-								</label>
-								<label class="radio inline control-label" tabindex="3" accesskey="m">
-									<input type="radio" name = "view" id="MonthView" value="month"> Month
-								</label>
-							</div>		
+						<div class="control-group">
+							<label class="radio inline control-label" tabindex="1" accesskey="d">
+								<input type="radio" name = "view" id="DayView" value="day"> Day
+							</label>
+							<label class="radio inline control-label" tabindex="2" accesskey="w">
+								<input type="radio" name = "view" id="WeekView" value="week"> Week
+							</label>
+							<label class="radio inline control-label" tabindex="3" accesskey="m">
+								<input type="radio" name = "view" id="MonthView" value="month"> Month
+							</label>
+						</div>
 							
 						<legend>Standard Tablestyle</legend>
 							<table>

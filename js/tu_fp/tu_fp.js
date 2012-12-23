@@ -133,6 +133,73 @@ var simulatePeriodChange = function() {
 	});
 }
 
+var showDay = function() {
+	$("#currentperiodinfotitle").fadeOut(350, function() {
+		$("#currentperiodinfotitle").html("viewing day");
+		$("#currentperiodinfotitle").fadeIn(350);
+	});
+	$("#currentperiodinfomoneypos").fadeOut(350, function() {
+		$("#currentperiodinfomoneypos").html(" 0,00 &euro;");
+		$("#currentperiodinfomoneypos").fadeIn(350);
+	});
+
+	$("#currentperiodinfomoneyneg").fadeOut(350, function() {
+		$("#currentperiodinfomoneyneg").html(" 22,53 &euro;");
+		$("#currentperiodinfomoneyneg").fadeIn(350);
+	});
+	$("#currentperiodinfomoneysaldo").fadeOut(350, function() {
+		$("#currentperiodinfomoneysaldo").html(" 143,20 &euro;");
+		$("#currentperiodinfomoneysaldo").removeClass("moneynegative");
+		$("#currentperiodinfomoneysaldo").removeClass("moneypositive");
+		$("#currentperiodinfomoneysaldo").addClass("moneynegative");
+		$("#currentperiodinfomoneysaldo").fadeIn(350);
+	});
+};
+var showWeek = function() {
+	$("#currentperiodinfotitle").fadeOut(350, function() {
+		$("#currentperiodinfotitle").html("viewing week");
+		$("#currentperiodinfotitle").fadeIn(350);
+	});
+	$("#currentperiodinfomoneypos").fadeOut(350, function() {
+		$("#currentperiodinfomoneypos").html(" 0,00 &euro;");
+		$("#currentperiodinfomoneypos").fadeIn(350);
+	});
+
+	$("#currentperiodinfomoneyneg").fadeOut(350, function() {
+		$("#currentperiodinfomoneyneg").html(" 143,20 &euro;");
+		$("#currentperiodinfomoneyneg").fadeIn(350);
+	});
+	$("#currentperiodinfomoneysaldo").fadeOut(350, function() {
+		$("#currentperiodinfomoneysaldo").html(" 143,20 &euro;");
+		$("#currentperiodinfomoneysaldo").removeClass("moneynegative");
+		$("#currentperiodinfomoneysaldo").removeClass("moneypositive");
+		$("#currentperiodinfomoneysaldo").addClass("moneynegative");
+		$("#currentperiodinfomoneysaldo").fadeIn(350);
+	});
+};
+var showMonth = function() {
+	$("#currentperiodinfotitle").fadeOut(350, function() {
+		$("#currentperiodinfotitle").html("viewing month");
+		$("#currentperiodinfotitle").fadeIn(350);
+	});
+	$("#currentperiodinfomoneypos").fadeOut(350, function() {
+		$("#currentperiodinfomoneypos").html(" 1972,52&euro;");
+		$("#currentperiodinfomoneypos").fadeIn(350);
+	});
+
+	$("#currentperiodinfomoneyneg").fadeOut(350, function() {
+		$("#currentperiodinfomoneyneg").html(" 1598,32&euro;");
+		$("#currentperiodinfomoneyneg").fadeIn(350);
+	});
+	$("#currentperiodinfomoneysaldo").fadeOut(350, function() {
+		$("#currentperiodinfomoneysaldo").html(" 374,20&euro;");
+		$("#currentperiodinfomoneysaldo").removeClass("moneynegative");
+		$("#currentperiodinfomoneysaldo").removeClass("moneypositive");
+		$("#currentperiodinfomoneysaldo").addClass("moneypositive");
+		$("#currentperiodinfomoneysaldo").fadeIn(350);
+	});
+};
+
 $(document).ready(function() {
 	/* Global Date */
 	var now = Date.today();
@@ -374,6 +441,17 @@ $(document).ready(function() {
 	$("#div_statistics_month").change(simulatePeriodChange);
 	$("#div_statistics_quarter").change(simulatePeriodChange);
 	$("#div_statistics_year").change(simulatePeriodChange);
+
+	//change current viewing-info on tab-change:
+	$("#tabPeriodChange").bind('shown', function(e) {
+		if(e.target.text == "Day") {
+			showDay();
+		} else if(e.target.text == "Week") {
+			showWeek();
+		} else if(e.target.text == "Month") {
+			showMonth();
+		}
+	});
 });
 
 
