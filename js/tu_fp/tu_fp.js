@@ -143,39 +143,41 @@ $(document).ready(function() {
 
 	/* calculate random money-values for month-view */
 	$(".money").each(function(index, elem) {
-		var value = 0;
-		var modif = 0;
-		var tmp1 = Math.ceil(Math.random() * 25);
-		if(tmp1 < 15)
-		modif = -10;
-		else if(tmp1 >= 15 && tmp1 < 18)
-		modif = -100;
-		else if(tmp1 >= 18 && tmp1 < 24)
-		modif = 0;
-		else
-		modif = 100;
+		if(index < 17) {    // heute ist der 17. des Monats
+			var value = 0;
+			var modif = 0;
+			var tmp1 = Math.ceil(Math.random() * 25);
+			if(tmp1 < 15)
+			modif = -10;
+			else if(tmp1 >= 15 && tmp1 < 18)
+			modif = -100;
+			else if(tmp1 >= 18 && tmp1 < 24)
+			modif = 0;
+			else
+			modif = 100;
 
-		value = Math.ceil(Math.random() * 100 * modif) / 100;
-		if(value == 0) {
-			$(this).html("");
-		} else if (value > 0) {
-			$(this).html(value + "&euro;");
-			$(this).addClass("moneypositive");
-		} else {
-			$(this).html(value + "&euro;");
-			$(this).addClass("moneynegative");
+			value = Math.ceil(Math.random() * 100 * modif) / 100;
+			if(value == 0) {
+				$(this).html("");
+			} else if (value > 0) {
+				$(this).html(value + "&euro;");
+				$(this).addClass("moneypositive");
+			} else {
+				$(this).html(value + "&euro;");
+				$(this).addClass("moneynegative");
+			}
+
+			/* In der Month-View sollte es kein edit geben, da die angezeigten Beträge die Summe des Tages sind, edit ist ja für das editieren einer bestimmten Rechnung.
+				Ein Tag kann mehrere Rechnungen haben, deshalb kann man so nur eine hinzufügen, editieren geht dann nur in der Tages- und Wochenansicht, weil man dort eine bestimmte Rechnung auswählen kann (hab ich dort einegefügt)
+				if(value != 0) {
+					var img = $(this).prevAll();
+					var div = img.last();
+					var a = $(div).find("a");
+					var image = $(div).find("img");
+					image.attr("src", "img/edit.png");
+					a.attr("href", "#editRecord");
+				} */
 		}
-
-/* In der Month-View sollte es kein edit geben, da die angezeigten Beträge die Summe des Tages sind, edit ist ja für das editieren einer bestimmten Rechnung.
-	Ein Tag kann mehrere Rechnungen haben, deshalb kann man so nur eine hinzufügen, editieren geht dann nur in der Tages- und Wochenansicht (hab ich dort einegefügt)
-		if(value != 0) {
-			var img = $(this).prevAll();
-			var div = img.last();
-			var a = $(div).find("a");
-			var image = $(div).find("img");
-			image.attr("src", "img/edit.png");
-			a.attr("href", "#editRecord");
-		} */
 	});
 	
 	$(".firstday").html("1972,23&euro;");
@@ -203,9 +205,11 @@ $(document).ready(function() {
 	$(".weekbg").on({
 		mouseenter: function(ev) {
 			$(this).children(".addButtonContainer").children("a").children(".plusBild").fadeIn(80);
+			$(this).children(".addButtonContainer").children("a").children(".editBild").fadeIn(80);
 		},
 		mouseleave: function(ev) {
 			$(this).children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
+			$(this).children(".addButtonContainer").children("a").children(".editBild").fadeOut(80);
 	}});
 	
 	/* ColorPickers */
