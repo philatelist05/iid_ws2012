@@ -94,9 +94,8 @@
 		</div>
 	</div>
 
-		<div class="row">
 	<div class="container" id="wrapper" style="width:90%">
-		<div style="width:90%">
+		<div style="width:90%;float:right">
 		<div class="container tab-content" id="tu_fp_global_container" style="float:left;width:80%">
 			<div class="tab-pane active" id="tu_fp_home_content" style="width:100%">
 				<div style="width:80%;float:left">
@@ -3571,14 +3570,14 @@
 						</div>
 					</div>
 				</div>
-			<div id="currentperiodinfo" class="container" style="width:15%;clear:none;float:left;position:relative;padding-left:10px">
-				<div class="spacer100" style="position:absolute;bottom:0;height:50%;top:90px">
-					<p><font style="font-weight: bold" id="currentperiodinfotitle">viewing month</font><br />
-					total income:<font id="currentperiodinfomoneypos" class="moneypositive"> 1972,52&euro;</font><br />
-					total spendings:<font id="currentperiodinfomoneyneg" class="moneynegative"> 1598,32&euro;</font><br />
-					saldo:<font id="currentperiodinfomoneysaldo" class="moneypositive"> 374,20&euro;</font></p>
+				<div id="currentperiodinfo" class="container" style="width:15%;clear:none;float:left;position:relative;padding-left:10px">
+					<div class="spacer100" style="position:absolute;bottom:0;height:50%;top:90px">
+						<p><font style="font-weight: bold" id="currentperiodinfotitle">current month</font><br />
+						total income:<font id="currentperiodinfomoneypos" class="moneypositive"> 1972,52&euro;</font><br />
+						total spendings:<font id="currentperiodinfomoneyneg" class="moneynegative"> 1598,32&euro;</font><br />
+						saldo:<font id="currentperiodinfomoneysaldo" class="moneypositive"> 374,20&euro;</font></p>
+					</div>
 				</div>
-			</div>
 			</div>
 		
 			<div class="tab-pane" id="tu_fp_evaluation_content">
@@ -3834,407 +3833,7 @@
 					
 				<!-- </form> -->
 			</div>
-	
 		</div>
-		
-		<div class="container" id="tu_fp_search_content" style="width:80%; display:none; float:left">
-			<div style="width:100%;float:left">
-				<h2 id="tu_fp_search_content_term">Search results:</h2>
-			
-					<div class="accordion" id="tu_fp_search_content_filter">
-						<div class="accordion-group">
-							<div class="accordion-heading">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="#tu_fp_search_content_filter" href="#collapseOne">
-									Filter <i class="icon-arrow-up"></i>
-								</a>
-							</div>
-							<div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
-								<div class="accordion-inner">								
-									<div class="clearfix" Style="width:50%;float:left">
-										<label>Begin Date:</label>
-										<div class="input">
-											<input class="xlarge disabled date" placeholder=""/>
-										</div>
-									</div>
-								
-									<div class="clearfix" Style="width:50%;float:left">
-										<label>End Date:</label>
-										<div class="input">
-											<input class="xlarge disabled date" placeholder=""/>
-										</div>
-									</div>
-								
-									<div class="clearfix">
-										<label>Category:</label>
-										<div class="input">
-											<select>
-												<option>All</option>
-												<option>Food</option>
-												<option>IT</option>
-												<option>Misc</option>
-												<option>Music</option>
-												<option>Present</option>
-												<option>Salary</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>			
-
-					<div>
-						<div id="example_wrapper" class="dataTables_wrapper" role="grid">
-							<table id="example" class="table table-bordered dataTable table-hover" cellspacing="0" cellpadding="0" border="0" aria-describedby="example_info">
-								<thead>
-									<tr role="row">
-										<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Date: activate to sort column descending">Date</th>
-										<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Time: activate to sort column ascending">Time</th>
-										<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Value: activate to sort column ascending">Value</th>
-										<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Description: activate to sort column ascending">Description</th>
-										<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending">Category</th>
-									</tr>
-								</thead>
-								<tbody role="alert" aria-live="polite" aria-relevant="all">
-									<tr class="gradeA odd success">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">01.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">3500&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Salary</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Salary</td>
-									</tr>
-									<tr class="gradeA odd info">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">03.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-200&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Playstation 4</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
-									</tr>
-									<tr class="gradeA even">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">05.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-105&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">E-Guitar Pickups</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Music</td>
-									</tr>
-									<tr class="gradeA odd">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-35&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Lunch</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
-									</tr>
-									<tr class="gradeA even">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-350&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">new door</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
-									</tr>
-									<tr class="gradeA odd">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-48&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Christmas present</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Present</td>
-									</tr>
-										<tr class="gradeA odd">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-10&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Vegetables</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
-									</tr>
-									<tr class="gradeA odd">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-16&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Ticket</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
-									</tr>
-									<tr class="gradeA odd info">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-90&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Playstation 4 Games</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
-									</tr>
-									<tr class="gradeA even">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-71&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Trousers</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
-									</tr>
-									<tr class="gradeA odd">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-24&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Cinema Tickets</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
-									</tr>
-									<tr class="gradeA even info">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-47&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">New tires</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
-									</tr>
-									<tr class="gradeA odd">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-1&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Hamburger</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
-									</tr>
-									<tr class="gradeA even info">
-										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">-63&euro;</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">New RAM</td>
-										<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-
-		
-		
-		
-
-	
-	<!-- BEGIN OF MODAL New Record DIALOG -->
-		<div id="newRecord" class="modal hide fade">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3>New Entry</h3>
-			</div>
-			<div class="modal-body">
-				<form class="form-horizontal">
-					<div class="control-group">
-						<label class="control-label" for="inputValue">Value:</label>
-						<div class="controls">
-							<input type="text" id="inputValue" placeholder="Value"/>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputDescription">Name / Description:</label>
-						<div class="controls">
-							<textarea rows="5" id="inputDescription" placeholder="Description"></textarea>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputTime">Time:</label>
-						<div class="controls">
-							<div style="width:100%">
-								<div class="slider"></div>
-							</div>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputVerification">Verification (e.g. bill):</label>
-						<div class="controls">
-							<input type="file" id="inputVerification" placeholder="inputVerification"/>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputCategory">Category</label>
-						<div class="controls">
-							<select id="inputVerification">
-								<option>please select ...</option>
-								<option>Rent</option>
-								<option>Car</option>
-								<option>Energy</option>
-							</select>
-							<a href="#" data-toggle="collapse" data-target="#categoryDiv"><img class="plusBild" src="img/add.png"></a>
-						</div>
-					</div>
-  
-  
-					<div id="categoryDiv" class="collapse">
-						<div class="control-group">
-							<label class="control-label" for="inputCategoryName">Category Name:</label>
-							<div class="controls">
-								<input type="text" id="inputCategoryName" placeholder="Name"/>
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputColor">Color:</label>
-							<div class="controls">
-								<div id="chosenColor" class="well well-small" style="padding:0px;float:left;width:60px;margin-right:30px;"></div>
-								<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:red;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:green;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:blue;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:yellow;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:gray;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:magenta;width:20px;;border:1px solid;"></div>
-								<a href="#" data-toggle="collapse" data-target="#colorChooserDiv">more ...</a>
-								<div id="colorChooserDiv" class="collapse"></div>
-							</div>
-						</div>    
-					</div>
-  					<div class="control-group">
-							<label class="control-label" for="inputIntervalCheck">Repeat?</label>
-							<div class="controls">
-								<input type="checkbox" id="inputIntervalCheck" data-toggle="collapse" data-target="#intervalDiv">
-							</div>
-					</div>
-  				
-  					<div id="intervalDiv" class="collapse">
-  						<div class="controls">
-  							Repeat this event every <a href="#" id="recuringInterval" data-toggle="collapse" data-target="#repeatRangePlaceHolder">weekday</a>
-							<div class="collapse" id="repeatRangePlaceHolder">
-								<div>
-									<input type='radio' name='range' onclick="$('#recuringInterval').text('weekday');$('#repeatRangePlaceHolder').collapse('hide')">weekday
-								</div>
-								<div>
-									<input type='radio' name='range' onclick="$('#recuringInterval').text('month');$('#repeatRangePlaceHolder').collapse('hide')">month
-								</div>
-								<div>
-									<input type='radio' name='range' onclick="$('#recuringInterval').text('year');$('#repeatRangePlaceHolder').collapse('hide')">year
-								</div>
-							</div>
-  							<br/>
-  							End this event <a href="#" id="shouldRecur" data-toggle="collapse" data-target="#intervalPlaceHolder">never</a>
-							<input class="date" id="inputEndDate" placeholder="31/12/2012" style="display:none;"/> 
-							<div class="collapse" id="intervalPlaceHolder">
-								<div>
-									<input type='radio' name='end' onclick="$('#shouldRecur').text('never');$('#inputEndDate').hide();$('#intervalPlaceHolder').collapse('hide')" >never
-								</div>
-								<div>
-									<input type='radio' name='end' id="atRadio" onclick="$('#shouldRecur').text('on');$('#inputEndDate').css({display : 'block'});$('#intervalPlaceHolder').collapse('hide')"> on*
-								</div>		
-							</div>
-  						</div>
-  					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal">Cancel</a>
-				<a href="#" class="btn btn-primary">Save and Continue</a>
-			</div>
-		</div>
-	<!-- END OF MODAL DIALOG -->
-	
-	<!-- BEGIN OF MODAL Edit Record DIALOG -->
-		<div id="editRecord" class="modal hide fade">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3>Edit Entry</h3>
-			</div>
-			<div class="modal-body">
-				<form class="form-horizontal">
-					<div class="control-group">
-						<label class="control-label" for="inputValue">Value:</label>
-						<div class="controls">
-							<input type="text" value="200"/>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputDescription">Name / Description:</label>
-						<div class="controls">
-							<textarea rows="5">Playstation 4</textarea>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputTime">Time:</label>
-						<div class="controls">
-							<div style="width:100%">
-								<div class="slider"></div>
-							</div>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputVerification">Verification (e.g. bill):</label>
-						<div class="controls">
-							<input type="file" placeholder="inputVerification"/>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputCategory">Category</label>
-						<div class="controls">
-							<select>
-								<option>please select ...</option>
-								<option>Rent</option>
-								<option>Car</option>
-								<option selected>IT</option>
-								<option>Energy</option>
-							</select>
-							<a href="#" data-toggle="collapse" data-target="#categoryDiv1"><img class="plusBild" src="img/add.png"></a>
-						</div>
-					</div>
-  
-  
-					<div id="categoryDiv1" class="collapse">
-						<div class="control-group">
-							<label class="control-label" for="inputCategoryName">Category Name:</label>
-							<div class="controls">
-								<input type="text" placeholder="Name"/>
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputColor">Color:</label>
-							<div class="controls">
-								<div id="chosenColor1" class="well well-small" style="padding:0px;float:left;width:60px;margin-right:30px;"></div>
-								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:red;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:green;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:blue;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:yellow;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:gray;width:20px;;border:1px solid;"></div>
-								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:magenta;width:20px;;border:1px solid;"></div>
-								<a href="#" data-toggle="collapse" data-target="#colorChooserDiv1">more ...</a>
-								<div id="colorChooserDiv1" class="collapse"></div>
-							</div>
-						</div>    
-					</div>
-  					<div class="control-group">
-							<label class="control-label" for="inputIntervalCheck">Repeat?</label>
-							<div class="controls">
-								<input type="checkbox" data-toggle="collapse" data-target="#intervalDiv1">
-							</div>
-					</div>
-  				
-  					<div id="intervalDiv1" class="collapse">
-  						<div class="controls">
-  							Repeat this event every <a href="#" id="recuringInterval1" data-toggle="collapse" data-target="#repeatRangePlaceHolder1">weekday</a>
-							<div class="collapse" id="repeatRangePlaceHolder1">
-								<div>
-									<input type='radio' name='range' onclick="$('#recuringInterval1').text('weekday');$('#repeatRangePlaceHolder1').collapse('hide')">weekday
-								</div>
-								<div>
-									<input type='radio' name='range' onclick="$('#recuringInterval1').text('month');$('#repeatRangePlaceHolder1').collapse('hide')">month
-								</div>
-								<div>
-									<input type='radio' name='range' onclick="$('#recuringInterval1').text('year');$('#repeatRangePlaceHolder1').collapse('hide')">year
-								</div>
-							</div>
-  							<br/>
-  							End this event <a href="#" id="shouldRecur1" data-toggle="collapse" data-target="#intervalPlaceHolder1">never</a>
-							<input class="date" id="inputEndDate1" placeholder="31/12/2012" style="display:none;"/> 
-							<div class="collapse" id="intervalPlaceHolder1">
-								<div>
-									<input type='radio' name='end' onclick="$('#shouldRecur1').text('never');$('#inputEndDate1').hide();$('#intervalPlaceHolder1').collapse('hide')" >never
-								</div>
-								<div>
-									<input type='radio' name='end' id="atRadio1" onclick="$('#shouldRecur1').text('on');$('#inputEndDate1').css({display : 'block'});$('#intervalPlaceHolder1').collapse('hide')"> on*
-								</div>		
-							</div>
-  						</div>
-  					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal">Close</a>
-				<a href="#" class="btn btn-primary">Save and Continue</a>
-			</div>
-		</div>
-	<!-- END OF MODAL DIALOG -->	
-	
 		<div class="container" style="width:10%;clear:none;float:right;position:relative">
 			<div class="spacer100 akkupositivspace" style="width:100%">
 				<div class="spacer100 akkupositivspace" style="position:absolute;bottom:0;height:50%">
@@ -4246,6 +3845,403 @@
 			<div class="spacer100 akkunegativ" hidden><p class="akkuvalue">800&euro;</p></div>
 		</div>
 	</div>
+		
+	<div class="container" id="tu_fp_search_content" style="width:80%; display:none; float:left">
+		<div style="width:100%;float:left">
+			<h2 id="tu_fp_search_content_term">Search results:</h2>
+		
+				<div class="accordion" id="tu_fp_search_content_filter">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#tu_fp_search_content_filter" href="#collapseOne">
+								Filter <i class="icon-arrow-up"></i>
+							</a>
+						</div>
+						<div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
+							<div class="accordion-inner">								
+								<div class="clearfix" Style="width:50%;float:left">
+									<label>Begin Date:</label>
+									<div class="input">
+										<input class="xlarge disabled date" placeholder=""/>
+									</div>
+								</div>
+							
+								<div class="clearfix" Style="width:50%;float:left">
+									<label>End Date:</label>
+									<div class="input">
+										<input class="xlarge disabled date" placeholder=""/>
+									</div>
+								</div>
+							
+								<div class="clearfix">
+									<label>Category:</label>
+									<div class="input">
+										<select>
+											<option>All</option>
+											<option>Food</option>
+											<option>IT</option>
+											<option>Misc</option>
+											<option>Music</option>
+											<option>Present</option>
+											<option>Salary</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>			
+
+				<div>
+					<div id="example_wrapper" class="dataTables_wrapper" role="grid">
+						<table id="example" class="table table-bordered dataTable table-hover" cellspacing="0" cellpadding="0" border="0" aria-describedby="example_info">
+							<thead>
+								<tr role="row">
+									<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Date: activate to sort column descending">Date</th>
+									<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Time: activate to sort column ascending">Time</th>
+									<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Value: activate to sort column ascending">Value</th>
+									<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Description: activate to sort column ascending">Description</th>
+									<th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending">Category</th>
+								</tr>
+							</thead>
+							<tbody role="alert" aria-live="polite" aria-relevant="all">
+								<tr class="gradeA odd success">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">01.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">3500&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Salary</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Salary</td>
+								</tr>
+								<tr class="gradeA odd info">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">03.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-200&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Playstation 4</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
+								</tr>
+								<tr class="gradeA even">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">05.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-105&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">E-Guitar Pickups</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Music</td>
+								</tr>
+								<tr class="gradeA odd">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-35&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Lunch</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
+								</tr>
+								<tr class="gradeA even">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-350&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">new door</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
+								</tr>
+								<tr class="gradeA odd">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-48&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Christmas present</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Present</td>
+								</tr>
+									<tr class="gradeA odd">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-10&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Vegetables</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
+								</tr>
+								<tr class="gradeA odd">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-16&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Ticket</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
+								</tr>
+								<tr class="gradeA odd info">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-90&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Playstation 4 Games</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
+								</tr>
+								<tr class="gradeA even">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-71&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Trousers</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
+								</tr>
+								<tr class="gradeA odd">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-24&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Cinema Tickets</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
+								</tr>
+								<tr class="gradeA even info">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-47&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">New tires</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
+								</tr>
+								<tr class="gradeA odd">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-1&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Hamburger</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
+								</tr>
+								<tr class="gradeA even info">
+									<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">-63&euro;</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">New RAM</td>
+									<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+	
+
+
+<!-- BEGIN OF MODAL New Record DIALOG -->
+	<div id="newRecord" class="modal hide fade">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>New Entry</h3>
+		</div>
+		<div class="modal-body">
+			<form class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="inputValue">Value:</label>
+					<div class="controls">
+						<input type="text" id="inputValue" placeholder="Value"/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputDescription">Name / Description:</label>
+					<div class="controls">
+						<textarea rows="5" id="inputDescription" placeholder="Description"></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputTime">Time:</label>
+					<div class="controls">
+						<div style="width:100%">
+							<div class="slider"></div>
+						</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputVerification">Verification (e.g. bill):</label>
+					<div class="controls">
+						<input type="file" id="inputVerification" placeholder="inputVerification"/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputCategory">Category</label>
+					<div class="controls">
+						<select id="inputVerification">
+							<option>please select ...</option>
+							<option>Rent</option>
+							<option>Car</option>
+							<option>Energy</option>
+						</select>
+						<a href="#" data-toggle="collapse" data-target="#categoryDiv"><img class="plusBild" src="img/add.png"></a>
+					</div>
+				</div>
+
+
+				<div id="categoryDiv" class="collapse">
+					<div class="control-group">
+						<label class="control-label" for="inputCategoryName">Category Name:</label>
+						<div class="controls">
+							<input type="text" id="inputCategoryName" placeholder="Name"/>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputColor">Color:</label>
+						<div class="controls">
+							<div id="chosenColor" class="well well-small" style="padding:0px;float:left;width:60px;margin-right:30px;"></div>
+							<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:red;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:green;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:blue;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:yellow;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:gray;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor" style="padding:0px;float:left;margin-right:10px;background-color:magenta;width:20px;;border:1px solid;"></div>
+							<a href="#" data-toggle="collapse" data-target="#colorChooserDiv">more ...</a>
+							<div id="colorChooserDiv" class="collapse"></div>
+						</div>
+					</div>    
+				</div>
+				<div class="control-group">
+						<label class="control-label" for="inputIntervalCheck">Repeat?</label>
+						<div class="controls">
+							<input type="checkbox" id="inputIntervalCheck" data-toggle="collapse" data-target="#intervalDiv">
+						</div>
+				</div>
+			
+				<div id="intervalDiv" class="collapse">
+					<div class="controls">
+						Repeat this event every <a href="#" id="recuringInterval" data-toggle="collapse" data-target="#repeatRangePlaceHolder">weekday</a>
+						<div class="collapse" id="repeatRangePlaceHolder">
+							<div>
+								<input type='radio' name='range' onclick="$('#recuringInterval').text('weekday');$('#repeatRangePlaceHolder').collapse('hide')">weekday
+							</div>
+							<div>
+								<input type='radio' name='range' onclick="$('#recuringInterval').text('month');$('#repeatRangePlaceHolder').collapse('hide')">month
+							</div>
+							<div>
+								<input type='radio' name='range' onclick="$('#recuringInterval').text('year');$('#repeatRangePlaceHolder').collapse('hide')">year
+							</div>
+						</div>
+						<br/>
+						End this event <a href="#" id="shouldRecur" data-toggle="collapse" data-target="#intervalPlaceHolder">never</a>
+						<input class="date" id="inputEndDate" placeholder="31/12/2012" style="display:none;"/> 
+						<div class="collapse" id="intervalPlaceHolder">
+							<div>
+								<input type='radio' name='end' onclick="$('#shouldRecur').text('never');$('#inputEndDate').hide();$('#intervalPlaceHolder').collapse('hide')" >never
+							</div>
+							<div>
+								<input type='radio' name='end' id="atRadio" onclick="$('#shouldRecur').text('on');$('#inputEndDate').css({display : 'block'});$('#intervalPlaceHolder').collapse('hide')"> on*
+							</div>		
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Cancel</a>
+			<a href="#" class="btn btn-primary">Save and Continue</a>
+		</div>
+	</div>
+<!-- END OF MODAL DIALOG -->
+
+<!-- BEGIN OF MODAL Edit Record DIALOG -->
+	<div id="editRecord" class="modal hide fade">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>Edit Entry</h3>
+		</div>
+		<div class="modal-body">
+			<form class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="inputValue">Value:</label>
+					<div class="controls">
+						<input type="text" value="200"/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputDescription">Name / Description:</label>
+					<div class="controls">
+						<textarea rows="5">Playstation 4</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputTime">Time:</label>
+					<div class="controls">
+						<div style="width:100%">
+							<div class="slider"></div>
+						</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputVerification">Verification (e.g. bill):</label>
+					<div class="controls">
+						<input type="file" placeholder="inputVerification"/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputCategory">Category</label>
+					<div class="controls">
+						<select>
+							<option>please select ...</option>
+							<option>Rent</option>
+							<option>Car</option>
+							<option selected>IT</option>
+							<option>Energy</option>
+						</select>
+						<a href="#" data-toggle="collapse" data-target="#categoryDiv1"><img class="plusBild" src="img/add.png"></a>
+					</div>
+				</div>
+
+
+				<div id="categoryDiv1" class="collapse">
+					<div class="control-group">
+						<label class="control-label" for="inputCategoryName">Category Name:</label>
+						<div class="controls">
+							<input type="text" placeholder="Name"/>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputColor">Color:</label>
+						<div class="controls">
+							<div id="chosenColor1" class="well well-small" style="padding:0px;float:left;width:60px;margin-right:30px;"></div>
+							<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:red;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:green;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:blue;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:yellow;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:gray;width:20px;;border:1px solid;"></div>
+							<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:magenta;width:20px;;border:1px solid;"></div>
+							<a href="#" data-toggle="collapse" data-target="#colorChooserDiv1">more ...</a>
+							<div id="colorChooserDiv1" class="collapse"></div>
+						</div>
+					</div>    
+				</div>
+				<div class="control-group">
+						<label class="control-label" for="inputIntervalCheck">Repeat?</label>
+						<div class="controls">
+							<input type="checkbox" data-toggle="collapse" data-target="#intervalDiv1">
+						</div>
+				</div>
+			
+				<div id="intervalDiv1" class="collapse">
+					<div class="controls">
+						Repeat this event every <a href="#" id="recuringInterval1" data-toggle="collapse" data-target="#repeatRangePlaceHolder1">weekday</a>
+						<div class="collapse" id="repeatRangePlaceHolder1">
+							<div>
+								<input type='radio' name='range' onclick="$('#recuringInterval1').text('weekday');$('#repeatRangePlaceHolder1').collapse('hide')">weekday
+							</div>
+							<div>
+								<input type='radio' name='range' onclick="$('#recuringInterval1').text('month');$('#repeatRangePlaceHolder1').collapse('hide')">month
+							</div>
+							<div>
+								<input type='radio' name='range' onclick="$('#recuringInterval1').text('year');$('#repeatRangePlaceHolder1').collapse('hide')">year
+							</div>
+						</div>
+						<br/>
+						End this event <a href="#" id="shouldRecur1" data-toggle="collapse" data-target="#intervalPlaceHolder1">never</a>
+						<input class="date" id="inputEndDate1" placeholder="31/12/2012" style="display:none;"/> 
+						<div class="collapse" id="intervalPlaceHolder1">
+							<div>
+								<input type='radio' name='end' onclick="$('#shouldRecur1').text('never');$('#inputEndDate1').hide();$('#intervalPlaceHolder1').collapse('hide')" >never
+							</div>
+							<div>
+								<input type='radio' name='end' id="atRadio1" onclick="$('#shouldRecur1').text('on');$('#inputEndDate1').css({display : 'block'});$('#intervalPlaceHolder1').collapse('hide')"> on*
+							</div>		
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+			<a href="#" class="btn btn-primary">Save and Continue</a>
+		</div>
+	</div><!-- END OF MODAL DIALOG -->
 </div>
 
 <!-- Begin Bootstrap Includes -->
