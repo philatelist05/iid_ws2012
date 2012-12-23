@@ -166,6 +166,8 @@ $(document).ready(function() {
 			$(this).addClass("moneynegative");
 		}
 
+/* In der Month-View sollte es kein edit geben, da die angezeigten Beträge die Summe des Tages sind, edit ist ja für das editieren einer bestimmten Rechnung.
+	Ein Tag kann mehrere Rechnungen haben, deshalb kann man so nur eine hinzufügen, editieren geht dann nur in der Tages- und Wochenansicht (hab ich dort einegefügt)
 		if(value != 0) {
 			var img = $(this).prevAll();
 			var div = img.last();
@@ -173,7 +175,7 @@ $(document).ready(function() {
 			var image = $(div).find("img");
 			image.attr("src", "img/edit.png");
 			a.attr("href", "#editRecord");
-		}
+		} */
 	});
 	
 	$(".firstday").html("1972,23&euro;");
@@ -191,9 +193,11 @@ $(document).ready(function() {
 	$(".show-grid").on({
 		mouseenter: function(ev) {
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeIn(400);
+			$(this).children(".span2").children(".addButtonContainer").children("a").children(".editBild").fadeIn(400);
 		},
 		mouseleave: function(ev) {
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(30);
+			$(this).children(".span2").children(".addButtonContainer").children("a").children(".editBild").fadeOut(30);
 	}});
 	
 	$(".weekbg").on({
