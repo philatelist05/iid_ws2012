@@ -286,10 +286,12 @@ $(document).ready(function() {
 	$(".row_bg").on({
 		mouseenter: function(ev) {
 			$(this).children("td:first").children("a").children(".editBild").fadeIn(400);
+			$(this).children("td:first").children("a").children(".deleteBild").fadeIn(400);
 			
 		},
 		mouseleave: function(ev) {
 			$(this).children("td:first").children("a").children(".editBild").fadeOut(30);
+			$(this).children("td:first").children("a").children(".deleteBild").fadeOut(30);
 			
 	}});
 	
