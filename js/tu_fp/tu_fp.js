@@ -277,10 +277,12 @@ $(document).ready(function() {
 		mouseenter: function(ev) {
 			$(this).children(".addButtonContainer").children("a").children(".plusBild").fadeIn(80);
 			$(this).children(".addButtonContainer").children("a").children(".editBild").fadeIn(80);
+			$(this).children(".addButtonContainer").children("a").children(".deleteBild").fadeIn(80);
 		},
 		mouseleave: function(ev) {
 			$(this).children(".addButtonContainer").children("a").children(".plusBild").fadeOut(80);
 			$(this).children(".addButtonContainer").children("a").children(".editBild").fadeOut(80);
+			$(this).children(".addButtonContainer").children("a").children(".deleteBild").fadeOut(80);
 	}});
 	
 	$(".row_bg").on({
