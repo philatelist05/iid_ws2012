@@ -135,7 +135,7 @@ var simulatePeriodChange = function() {
 
 var showDay = function() {
 	$("#currentperiodinfotitle").fadeOut(350, function() {
-		$("#currentperiodinfotitle").html("viewing day");
+		$("#currentperiodinfotitle").html("current day");
 		$("#currentperiodinfotitle").fadeIn(350);
 	});
 	$("#currentperiodinfomoneypos").fadeOut(350, function() {
@@ -157,7 +157,7 @@ var showDay = function() {
 };
 var showWeek = function() {
 	$("#currentperiodinfotitle").fadeOut(350, function() {
-		$("#currentperiodinfotitle").html("viewing week");
+		$("#currentperiodinfotitle").html("current week");
 		$("#currentperiodinfotitle").fadeIn(350);
 	});
 	$("#currentperiodinfomoneypos").fadeOut(350, function() {
@@ -179,7 +179,7 @@ var showWeek = function() {
 };
 var showMonth = function() {
 	$("#currentperiodinfotitle").fadeOut(350, function() {
-		$("#currentperiodinfotitle").html("viewing month");
+		$("#currentperiodinfotitle").html("current month");
 		$("#currentperiodinfotitle").fadeIn(350);
 	});
 	$("#currentperiodinfomoneypos").fadeOut(350, function() {
