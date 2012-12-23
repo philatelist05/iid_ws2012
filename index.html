@@ -3688,7 +3688,8 @@
 								
 					<!-- <form class="form-inline" > -->
 						<legend>Defaultview</legend>
-						<div class="control-group">
+						Granularity:
+						<div class="control-group" style="margin-top:0px">
 							<label class="radio inline control-label" tabindex="1" accesskey="d">
 								<input type="radio" name = "view" id="DayView" value="day"> Day
 							</label>
@@ -3699,8 +3700,17 @@
 								<input type="radio" name = "view" id="MonthView" value="month"> Month
 							</label>
 						</div>
+						Viewing Style:
+						<div class="control-group">
+							<label class="radio inline control-label" tabindex="1" accesskey="g">
+								<input type="radio" name = "view" id="DayView" value="day"> Grid
+							</label>
+							<label class="radio inline control-label" tabindex="2" accesskey="t">
+								<input type="radio" name = "view" id="WeekView" value="week"> Table
+							</label>
+						</div>
 							
-						<legend>Standard Tablestyle</legend>
+						<legend>Standard Tablestyle of Tableview and Global Search</legend>
 							<table>
 								<tr>
 									<th>
@@ -3731,9 +3741,10 @@
 									</td>
 									<td>
 										<p>
-											<button type="submit" class="btn btn-primary" onclick = " move(document.choose.chooseable, document.act.acti)" >-></button>
+											<button type="submit" class="btn btn-primary">></button>
 										<p>
-											<button type="submit" class="btn btn-primary" onclick = " move(document.act.acti, document.choose.chooseable)" ><-</button>		
+											<button type="submit" class="btn btn-primary"><</button>
+											<!--  onclick = " move(document.act.acti, document.choose.chooseable)"  -->		
 									</td>
 									<td >
 									</td>
@@ -3746,19 +3757,18 @@
 									</td>
 								</tr>
 							</table>
-						<legend>Sortingstyle</legend>
+						<legend>Sortingstyle of Tableview and Global Search</legend>
 						<div style = "form-inline">
 							<label for="sortingstyle">
-								Column
+								Column:
 						</label>
 							<select name="sortingstyle" id="sortingstyle" title="Please choose!">
-								<option>Select one ...</option>
+								<option>Select ...</option>
 								<option>Date</option>
 								<option>Time</option>
 								<option>Value</option>
 								<option>Description</option>
 							</select>
-							<span>by </span>
 							<div class = "control-group">
 								<div class = "controls" >
 								<label class="radio inline control-label" tabindex="4" accesskey="a">
@@ -3771,7 +3781,7 @@
 							</div>
 							
 						</div>
-					<legend>Define Limits</legend>
+					<legend>Budget Limits</legend>
 					<div class = "control-group" >
 						<label class = "control-label" for="minB">min. Budgetlimit: 
 						</label>
@@ -3794,7 +3804,7 @@
 						<label for="defcategory">
 							Default category: 
 							<select name="category" id="category" title="Please choose!">
-								<option>Select one ...</option>
+								<option>Select ...</option>
 								<option>Food</option>
 								<option>Housing</option>
 								<option>Life</option>
