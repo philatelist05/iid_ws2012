@@ -281,6 +281,16 @@ $(document).ready(function() {
 			$(this).children(".addButtonContainer").children("a").children(".editBild").fadeOut(80);
 	}});
 	
+	$(".row_bg").on({
+		mouseenter: function(ev) {
+			$(this).children("td:first").children("a").children(".editBild").fadeIn(400);
+			
+		},
+		mouseleave: function(ev) {
+			$(this).children("td:first").children("a").children(".editBild").fadeOut(30);
+			
+	}});
+	
 	/* ColorPickers */
 	$('#colorChooserDiv').ColorPicker({
 		flat: true,
