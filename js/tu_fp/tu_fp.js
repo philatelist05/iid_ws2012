@@ -183,12 +183,14 @@ $(document).ready(function() {
 	$(".firstday").html("1972,23&euro;");
 	$(".firstday").removeClass("moneynegative");
 	$(".firstday").addClass("moneypositive");
+	/* no edit in month-view - see above	
 	var img = $(".firstday").prevAll();
 	var div = img.last();
 	var a = $(div).find("a");
 	var image = $(div).find("img");
 	image.attr("src", "img/edit.png");
 	a.attr("href", "#editRecord");
+	*/
 	
 	
 	$(".akkupositiv").slideDown();
