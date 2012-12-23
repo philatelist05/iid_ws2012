@@ -21,6 +21,9 @@
 	.grid {
 		cursor:pointer;	
 	}
+	li {
+		cursor:pointer;	
+	}
 	.addButtonContainer {
 		max-height: 40px;
 	}
@@ -99,21 +102,21 @@
 				<div style="width:80%;float:left">
 					<div id="header">
 						<div class="pull-left">
-							<ul class="nav nav-pills" class="myTab" style="margin:0px">
+							<ul class="nav nav-pills myTab time" style="margin:0px">
 								<li><a href="#day" data-toggle="tab">Day</a></li>
 								<li><a href="#week" data-toggle="tab">Week</a></li>
 								<li class="active"><a href="#month" data-toggle="tab">Month</a></li>
 							</ul>
 						</div>
 						<div class="pull-left">
-							<ul class="nav nav-pills pull-left" class="myTab" style="margin:0px">
-								<li><a href="#" id="nextMonth">&lt;</a></li>
+							<ul class="nav nav-pills pull-left myTab" style="margin:0px">
+								<li><a href="#" id="prevMonth">&lt;</a></li>
 								<li><a href="#" id="today">Today</a></li>
-								<li><a href="#" id="prevMonth">&gt;</a></li>
+								<li><a href="#" id="nextMonth">&gt;</a></li>
 							</ul>
-							<ul class="nav nav-pills pull-right" style="margin:0px">
-								<li class="active"><a href="#">Grid</a></li>
-								<li><a href="#">Table</a></li>
+							<ul class="nav nav-pills pull-right layout" style="margin:0px">
+								<li class="active"><a id="grid" data-toggle="tab">Grid</a></li>
+								<li><a href="#tableview" data-toggle="tab" id="table">Table</a></li>
 							</ul>
 						</div>
 					</div>
@@ -3433,99 +3436,99 @@
 											</tr>
 										</thead>
 										<tbody role="alert" aria-live="polite" aria-relevant="all">
-											<tr class="gradeA odd success">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">01.12.2012</td>
+											<tr class="gradeA odd success searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">01.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">3500&euro;</td>
 												<td class="center ">Salary</td>
 												<td class="center ">Salary</td>
 											</tr>
-											<tr class="gradeA odd info">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">03.12.2012</td>
+											<tr class="gradeA odd info searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">03.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">-200&euro;</td>
 												<td class="center ">Playstation 4</td>
 												<td class="center ">IT</td>
 											</tr>
-											<tr class="gradeA even">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">05.12.2012</td>
+											<tr class="gradeA even searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">05.12.2012</td>
 												<td class=" ">17:00</td>
 												<td class=" ">-105&euro;</td>
 												<td class="center ">E-Guitar Pickups</td>
 												<td class="center ">Music</td>
 											</tr>
-											<tr class="gradeA odd">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+											<tr class="gradeA odd searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">-35&euro;</td>
 												<td class="center ">Lunch</td>
 												<td class="center ">Food</td>
 											</tr>
-											<tr class="gradeA even">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+											<tr class="gradeA even searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">17:00</td>
 												<td class=" ">-350&euro;</td>
 												<td class="center ">new door</td>
 												<td class="center ">Misc</td>
 											</tr>
-											<tr class="gradeA odd">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+											<tr class="gradeA odd searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">-48&euro;</td>
 												<td class="center ">Christmas present</td>
 												<td class="center ">Present</td>
 											</tr>
-												<tr class="gradeA odd">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+												<tr class="gradeA odd searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">17:00</td>
 												<td class=" ">-10&euro;</td>
 												<td class="center ">Vegetables</td>
 												<td class="center ">Food</td>
 											</tr>
-											<tr class="gradeA odd">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+											<tr class="gradeA odd searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">-16&euro;</td>
 												<td class="center ">Ticket</td>
 												<td class="center ">Misc</td>
 											</tr>
-											<tr class="gradeA odd info">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+											<tr class="gradeA odd info searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">-90&euro;</td>
 												<td class="center ">Playstation 4 Games</td>
 												<td class="center ">IT</td>
 											</tr>
-											<tr class="gradeA even">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+											<tr class="gradeA even searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">17:00</td>
 												<td class=" ">-71&euro;</td>
 												<td class="center ">Trousers</td>
 												<td class="center ">Misc</td>
 											</tr>
-											<tr class="gradeA odd">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+											<tr class="gradeA odd searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">-24&euro;</td>
 												<td class="center ">Cinema Tickets</td>
 												<td class="center ">Misc</td>
 											</tr>
-											<tr class="gradeA even info">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
+											<tr class="gradeA even info searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">07.12.2012</td>
 												<td class=" ">17:00</td>
 												<td class=" ">-47&euro;</td>
 												<td class="center ">New tires</td>
 												<td class="center ">IT</td>
 											</tr>
-											<tr class="gradeA odd">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
+											<tr class="gradeA odd searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">08.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">-1&euro;</td>
 												<td class="center ">Hamburger</td>
 												<td class="center ">Food</td>
 											</tr>
-											<tr class="gradeA even info">
-												<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
+											<tr class="gradeA even info searchPointer" data-toggle="modal" href="#editRecord">
+												<td class="sorting_1">08.12.2012</td>
 												<td class=" ">08:00</td>
 												<td class=" ">-63&euro;</td>
 												<td class="center ">New RAM</td>
@@ -3775,7 +3778,7 @@
 			
 						<div class="form-actions">
 							<button type="submit" class="btn btn-primary">Save changes</button>
-							<button type="button" class="btn">Cancel</button>
+							<button type="button" class="btn">Close</button>
 						</div>
 					
 				<!-- </form> -->
@@ -3844,101 +3847,101 @@
 								<tbody role="alert" aria-live="polite" aria-relevant="all">
 									<tr class="gradeA odd success">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">01.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">3500&euro;</td>
-										<td class="center ">Salary</td>
-										<td class="center ">Salary</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">3500&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Salary</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Salary</td>
 									</tr>
 									<tr class="gradeA odd info">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">03.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">-200&euro;</td>
-										<td class="center ">Playstation 4</td>
-										<td class="center ">IT</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-200&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Playstation 4</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
 									</tr>
 									<tr class="gradeA even">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">05.12.2012</td>
-										<td class=" ">17:00</td>
-										<td class=" ">-105&euro;</td>
-										<td class="center ">E-Guitar Pickups</td>
-										<td class="center ">Music</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-105&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">E-Guitar Pickups</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Music</td>
 									</tr>
 									<tr class="gradeA odd">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">-35&euro;</td>
-										<td class="center ">Lunch</td>
-										<td class="center ">Food</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-35&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Lunch</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
 									</tr>
 									<tr class="gradeA even">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">17:00</td>
-										<td class=" ">-350&euro;</td>
-										<td class="center ">new door</td>
-										<td class="center ">Misc</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-350&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">new door</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
 									</tr>
 									<tr class="gradeA odd">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">-48&euro;</td>
-										<td class="center ">Christmas present</td>
-										<td class="center ">Present</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-48&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Christmas present</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Present</td>
 									</tr>
 										<tr class="gradeA odd">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">17:00</td>
-										<td class=" ">-10&euro;</td>
-										<td class="center ">Vegetables</td>
-										<td class="center ">Food</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-10&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Vegetables</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
 									</tr>
 									<tr class="gradeA odd">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">-16&euro;</td>
-										<td class="center ">Ticket</td>
-										<td class="center ">Misc</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-16&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Ticket</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
 									</tr>
 									<tr class="gradeA odd info">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">-90&euro;</td>
-										<td class="center ">Playstation 4 Games</td>
-										<td class="center ">IT</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-90&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Playstation 4 Games</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
 									</tr>
 									<tr class="gradeA even">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">17:00</td>
-										<td class=" ">-71&euro;</td>
-										<td class="center ">Trousers</td>
-										<td class="center ">Misc</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-71&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Trousers</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
 									</tr>
 									<tr class="gradeA odd">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">-24&euro;</td>
-										<td class="center ">Cinema Tickets</td>
-										<td class="center ">Misc</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-24&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Cinema Tickets</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Misc</td>
 									</tr>
 									<tr class="gradeA even info">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">07.12.2012</td>
-										<td class=" ">17:00</td>
-										<td class=" ">-47&euro;</td>
-										<td class="center ">New tires</td>
-										<td class="center ">IT</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">17:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-47&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">New tires</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
 									</tr>
 									<tr class="gradeA odd">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">-1&euro;</td>
-										<td class="center ">Hamburger</td>
-										<td class="center ">Food</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-1&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Hamburger</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">Food</td>
 									</tr>
 									<tr class="gradeA even info">
 										<td class="searchPointer sorting_1" onClick="showDayView();hideShowDiv('tu_fp_search_content','tu_fp_global_container')">08.12.2012</td>
-										<td class=" ">08:00</td>
-										<td class=" ">-63&euro;</td>
-										<td class="center ">New RAM</td>
-										<td class="center ">IT</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">08:00</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">-63&euro;</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">New RAM</td>
+										<td class="searchPointer" data-toggle="modal" href="#editRecord">IT</td>
 									</tr>
 								</tbody>
 							</table>
@@ -3954,7 +3957,7 @@
 		
 
 	
-	<!-- BEGIN OF MODAL DIALOG -->
+	<!-- BEGIN OF MODAL New Record DIALOG -->
 		<div id="newRecord" class="modal hide fade">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -3978,7 +3981,7 @@
 						<label class="control-label" for="inputTime">Time:</label>
 						<div class="controls">
 							<div style="width:100%">
-								<div id="slider"></div>
+								<div class="slider"></div>
 							</div>
 						</div>
 					</div>
@@ -4062,10 +4065,125 @@
 			</div>
 			<div class="modal-footer">
 				<a href="#" class="btn" data-dismiss="modal">Cancel</a>
-				<a href="#" class="btn btn-primary">Save</a>
+				<a href="#" class="btn btn-primary">Save and Continue</a>
 			</div>
 		</div>
 	<!-- END OF MODAL DIALOG -->
+	
+	<!-- BEGIN OF MODAL Edit Record DIALOG -->
+		<div id="editRecord" class="modal hide fade">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3>Edit Entry</h3>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="inputValue">Value:</label>
+						<div class="controls">
+							<input type="text" value="200"/>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputDescription">Name / Description:</label>
+						<div class="controls">
+							<textarea rows="5">Playstation 4</textarea>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputTime">Time:</label>
+						<div class="controls">
+							<div style="width:100%">
+								<div class="slider"></div>
+							</div>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputVerification">Verification (e.g. bill):</label>
+						<div class="controls">
+							<input type="file" placeholder="inputVerification"/>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputCategory">Category</label>
+						<div class="controls">
+							<select>
+								<option>please select ...</option>
+								<option>Rent</option>
+								<option>Car</option>
+								<option selected>IT</option>
+								<option>Energy</option>
+							</select>
+							<a href="#" data-toggle="collapse" data-target="#categoryDiv1"><img class="plusBild" src="img/add.png"></a>
+						</div>
+					</div>
+  
+  
+					<div id="categoryDiv1" class="collapse">
+						<div class="control-group">
+							<label class="control-label" for="inputCategoryName">Category Name:</label>
+							<div class="controls">
+								<input type="text" placeholder="Name"/>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputColor">Color:</label>
+							<div class="controls">
+								<div id="chosenColor1" class="well well-small" style="padding:0px;float:left;width:60px;margin-right:30px;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:red;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:green;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:blue;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:yellow;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:gray;width:20px;;border:1px solid;"></div>
+								<div class="well well-small fixedColor1" style="padding:0px;float:left;margin-right:10px;background-color:magenta;width:20px;;border:1px solid;"></div>
+								<a href="#" data-toggle="collapse" data-target="#colorChooserDiv1">more ...</a>
+								<div id="colorChooserDiv1" class="collapse"></div>
+							</div>
+						</div>    
+					</div>
+  					<div class="control-group">
+							<label class="control-label" for="inputIntervalCheck">Repeat?</label>
+							<div class="controls">
+								<input type="checkbox" data-toggle="collapse" data-target="#intervalDiv1">
+							</div>
+					</div>
+  				
+  					<div id="intervalDiv1" class="collapse">
+  						<div class="controls">
+  							Repeat this event every <a href="#" id="recuringInterval1" data-toggle="collapse" data-target="#repeatRangePlaceHolder1">weekday</a>
+							<div class="collapse" id="repeatRangePlaceHolder1">
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval1').text('weekday');$('#repeatRangePlaceHolder1').collapse('hide')">weekday
+								</div>
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval1').text('month');$('#repeatRangePlaceHolder1').collapse('hide')">month
+								</div>
+								<div>
+									<input type='radio' name='range' onclick="$('#recuringInterval1').text('year');$('#repeatRangePlaceHolder1').collapse('hide')">year
+								</div>
+							</div>
+  							<br/>
+  							End this event <a href="#" id="shouldRecur1" data-toggle="collapse" data-target="#intervalPlaceHolder1">never</a>
+							<input class="date" id="inputEndDate1" placeholder="31/12/2012" style="display:none;"/> 
+							<div class="collapse" id="intervalPlaceHolder1">
+								<div>
+									<input type='radio' name='end' onclick="$('#shouldRecur1').text('never');$('#inputEndDate1').hide();$('#intervalPlaceHolder1').collapse('hide')" >never
+								</div>
+								<div>
+									<input type='radio' name='end' id="atRadio1" onclick="$('#shouldRecur1').text('on');$('#inputEndDate1').css({display : 'block'});$('#intervalPlaceHolder1').collapse('hide')"> on*
+								</div>		
+							</div>
+  						</div>
+  					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				<a href="#" class="btn btn-primary">Save and Continue</a>
+			</div>
+		</div>
+	<!-- END OF MODAL DIALOG -->	
+	
 	</div>
 		<div class="container" style="width:1%;clear:none;float:right;position:relative">
 			<div class="spacer100 akkupositivspace" style="width:100%">
@@ -4101,7 +4219,7 @@
 	
 	<script src="js/application.js"></script>
  
-<! -- End Bootstrap JS-->
+<!-- End Bootstrap JS-->
 
 
 <!-- Begin Custom Includes -->
@@ -4113,11 +4231,13 @@
 	<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.js"></script>
 	
 	<script type="text/javascript" src="js/date.js"></script>	
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="js/extras.js"></script>
 	
 	<script type="text/javascript" src="js/tu_fp/tu_fp.js"></script>
 	<script type="text/javascript" src="js/tu_fp/tu_fp_custom.js"></script>
 	
-<! -- End Bootstrap JS-->
+<!-- End Bootstrap JS-->
 
 
 

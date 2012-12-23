@@ -21,21 +21,70 @@ function showDayView() {
 	$('#globalNav a:first').tab('show');
 }
 
+function nextDate(now){
+	var gran = $(".time .active a").attr("href");
+	if(gran == "#month"){
+		return now.next().month();
+	}
+	else if(gran == "#week"){
+		return now.next().week();
+	}
+	else if(gran == "#day"){
+		return now.next().day();
+	}
+}
+
+function prevDate(now){
+	var gran = $(".time .active a").attr("href");
+	if(gran == "#month"){
+		return now.prev().month();
+	}
+	else if(gran == "#week"){
+		return now.prev().week();
+	}
+	else if(gran == "#day"){
+		return now.prev().day();
+	}
+}
+
 function dispDate(now){	
-	var months = new Array();
-	months[0] = "January";
-	months[1] = "February";
-	months[2] = "March";
-	months[3] = "April";
-	months[4] = "May";
-	months[5] = "June";
-	months[6] = "July";
-	months[7] = "August";
-	months[8] = "September";
-	months[9] = "October";
-	months[10] = "November";
-	months[11] = "December";
-	return months[now.getMonth()] + " " + now.getFullYear();
+	var gran = $(".time .active a").attr("href");
+	if(gran == "#month"){
+		var months = new Array();
+		months[0] = "January";
+		months[1] = "February";
+		months[2] = "March";
+		months[3] = "April";
+		months[4] = "May";
+		months[5] = "June";
+		months[6] = "July";
+		months[7] = "August";
+		months[8] = "September";
+		months[9] = "October";
+		months[10] = "November";
+		months[11] = "December";
+		return months[now.getMonth()] + " " + now.getFullYear();
+	}
+	else if(gran == "#week"){
+		var weekNumber = Number(now.format("%U")) + 1;
+		return weekNumber + " Week " + now.getFullYear();
+	}
+	else if(gran == "#day") {
+		var months = new Array();
+		months[0] = "January";
+		months[1] = "February";
+		months[2] = "March";
+		months[3] = "April";
+		months[4] = "May";
+		months[5] = "June";
+		months[6] = "July";
+		months[7] = "August";
+		months[8] = "September";
+		months[9] = "October";
+		months[10] = "November";
+		months[11] = "December";
+		return Number(now.toString("dd")) + " " + months[now.getMonth()] + " " + now.getFullYear();
+	}
 }
 
 var showStatisticBars = function() {
@@ -73,6 +122,10 @@ var simulatePeriodChange = function() {
 $(document).ready(function() {
 	/* Global Date */
 	var now = Date.today();
+	
+	var granularity = $(".time a:last");
+	
+	var mode = "grid";
 
 	/* calculate random money-values for month-view */
 	$(".money").each(function(index, elem) {
@@ -80,13 +133,13 @@ $(document).ready(function() {
 		var modif = 0;
 		var tmp1 = Math.ceil(Math.random() * 25);
 		if(tmp1 < 15)
-			modif = -10;
+		modif = -10;
 		else if(tmp1 >= 15 && tmp1 < 18)
-			modif = -100;
+		modif = -100;
 		else if(tmp1 >= 18 && tmp1 < 24)
-			modif = 0;
+		modif = 0;
 		else
-			modif = 100;
+		modif = 100;
 
 		value = Math.ceil(Math.random() * 100 * modif) / 100;
 		if(value == 0) {
@@ -98,10 +151,27 @@ $(document).ready(function() {
 			$(this).html(value + "&euro;");
 			$(this).addClass("moneynegative");
 		}
+
+		if(value != 0) {
+			var img = $(this).prevAll();
+			var div = img.last();
+			var a = $(div).find("a");
+			var image = $(div).find("img");
+			image.attr("src", "img/edit.png");
+			a.attr("href", "#editRecord");
+		}
 	});
+	
 	$(".firstday").html("1972,23&euro;");
 	$(".firstday").removeClass("moneynegative");
 	$(".firstday").addClass("moneypositive");
+	var img = $(".firstday").prevAll();
+	var div = img.last();
+	var a = $(div).find("a");
+	var image = $(div).find("img");
+	image.attr("src", "img/edit.png");
+	a.attr("href", "#editRecord");
+	
 	
 	$(".akkupositiv").slideDown();
 	$(".show-grid").on({
@@ -135,8 +205,25 @@ $(document).ready(function() {
 			$('#chosenColor').css('background-color', '#' + hex);
 		}
 	});
+	$('#colorChooserDiv1').ColorPicker({
+		flat: true,
+		onShow: function (colpkr) {
+			$(colpkr).fadeIn(500);
+			return false;
+		},
+		onHide: function (colpkr) {
+			$(colpkr).fadeOut(500);
+			return false;
+		},
+		onChange: function (hsb, hex, rgb) {
+			$('#chosenColor').css('background-color', '#' + hex);
+		}
+	});
 	$(".fixedColor").click(function(){
 			$("#chosenColor").css({'background-color' : $(this).css("background-color")});
+	});
+	$(".fixedColor1").click(function(){
+			$("#chosenColor1").css({'background-color' : $(this).css("background-color")});
 	});
 	$(".fixedColor").on({
 		mouseenter: function(ev) {
@@ -145,7 +232,13 @@ $(document).ready(function() {
 		mouseleave: function(ev) {
 			$(this).css({"opacity" : 1});
 	}});
-	
+	$(".fixedColor1").on({
+		mouseenter: function(ev) {
+			$(this).css({"opacity" : 0.4});
+		},
+		mouseleave: function(ev) {
+			$(this).css({"opacity" : 1});
+	}});
 	
 	
 	/* DatePickers */
@@ -166,12 +259,12 @@ $(document).ready(function() {
 	
 	/* Current Date Functions */
 	$("#prevMonth").click(function(){
-		now = now.prev().month();
+		now = prevDate(now)
 		$("#currentDate").text(dispDate(now));
 	});
 	
 	$("#nextMonth").click(function(){
-		now = now.next().month();
+		now = nextDate(now)
 		$("#currentDate").text(dispDate(now));
 	});
 	
@@ -220,6 +313,34 @@ $(document).ready(function() {
 			});
 		}
 	});
+	
+	
+	$("#grid").click(function(e){
+		mode = "grid";
+		href = granularity.attr("href");	
+		$(".time a[href='#week']").tab("show");
+		$(".time a[href='#day']").tab("show");
+		$(".time a[href='#month']").tab("show");
+		$(".time a[href='" + href + "']").tab("show");
+
+	});
+	
+	$("#table").click(function(){
+		mode = "table";
+	});
+	
+	
+	$(".time a").click(function(){
+		$("#currentDate").text(dispDate(now));
+		granularity = $(this);
+	});
+	
+	$('.time a[data-toggle="tab"]').on('shown', function (e) {
+		if(mode == "table"){
+			$(".layout a").tab("show");
+		}
+		$("#currentDate").text(dispDate(now));
+	})
 
 	//evaluation - date-choosers-simulate period-change:
 	$("#category-chooser").val(1);
@@ -233,7 +354,7 @@ $(document).ready(function() {
 
 
 $(function() {
-	var slider  = $('#slider');
+	var slider  = $('.slider');
 	var $div = $("<div id='tooltip'/>")
                     .css({ position : 'absolute' , top : -20, left : 0, display : "block" })
                     .text("12:00");
