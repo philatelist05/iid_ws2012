@@ -265,10 +265,12 @@ $(document).ready(function() {
 		mouseenter: function(ev) {
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeIn(400);
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".editBild").fadeIn(400);
+			$(this).children(".span2").children(".addButtonContainer").children("a").children(".deleteBild").fadeIn(400);
 		},
 		mouseleave: function(ev) {
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".plusBild").fadeOut(30);
 			$(this).children(".span2").children(".addButtonContainer").children("a").children(".editBild").fadeOut(30);
+			$(this).children(".span2").children(".addButtonContainer").children("a").children(".deleteBild").fadeOut(30);
 	}});
 	
 	$(".weekbg").on({
@@ -461,6 +463,11 @@ $(document).ready(function() {
 		} else if(e.target.text == "Month") {
 			showMonth();
 		}
+	});
+	
+	/* Delete Confirm */
+	$("a[href='#deleteRecord']").click(function(){
+		return confirm("Are you sure you want to delete?")
 	});
 });
 
